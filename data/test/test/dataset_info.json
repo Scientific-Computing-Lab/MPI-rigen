@@ -1,0 +1,50 @@
+{
+  "builder_name": "json",
+  "citation": "",
+  "config_name": "default",
+  "dataset_name": "json",
+  "dataset_size": 20447854,
+  "description": "",
+  "download_checksums": {
+    "/home/nadavsc/LIGHTBITS/mpiricalplus/dataset/dataset_saved/bpe/2048_test/mccplus_target_dataset_2048_bpe.jsonl": {
+      "num_bytes": 21677324,
+      "checksum": null
+    }
+  },
+  "download_size": 21677324,
+  "features": {
+    "program": {
+      "dtype": "string",
+      "_type": "Value"
+    },
+    "code": {
+      "dtype": "string",
+      "_type": "Value"
+    },
+    "mpi_labels": {
+      "dtype": "string",
+      "_type": "Value"
+    },
+    "full": {
+      "dtype": "string",
+      "_type": "Value"
+    }
+  },
+  "homepage": "",
+  "license": "",
+  "size_in_bytes": 42125178,
+  "splits": {
+    "train": {
+      "name": "train",
+      "num_bytes": 20447854,
+      "num_examples": 13233,
+      "dataset_name": "json"
+    }
+  },
+  "version": {
+    "version_str": "0.0.0",
+    "major": 0,
+    "minor": 0,
+    "patch": 0
+  }
+}

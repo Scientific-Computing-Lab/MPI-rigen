@@ -1,0 +1,2 @@
+Functions Distribution: {'MPI_Init': 554, 'MPI_Comm_rank': 405, 'MPI_Comm_size': 397, 'MPI_Finalize': 269, 'MPI_Recv': 35, 'MPI_Bcast': 26, 'MPI_Send': 47, 'MPI_Reduce': 12} 
+Number of functions: 1745 

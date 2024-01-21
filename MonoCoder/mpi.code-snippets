@@ -1,0 +1,3194 @@
+{
+"MPI_Abort": {
+	"scope": "c,cpp",
+	"prefix": ["MPI_Abort"],
+	"description" : "MPI Abort Snippet",
+	"body" : [ "MPI_Abort( ${1:MPI_Comm comm} , ${2:int errorcode});"]
+},
+
+"MPI_Accumulate": {
+	"scope": "c,cpp",
+	"prefix": ["MPI_Accumulate"],
+	"description" : "MPI Accumulate Snippet",
+	"body" : [ "MPI_Accumulate( ${1:const void* origin_addr} , ${2:MPI_Count origin_count} , ${3:MPI_Datatype origin_datatype} , ${4:int target_rank} , ${5:MPI_Aint target_disp} , ${6:MPI_Count target_count} , ${7:MPI_Datatype target_datatype} , ${8:MPI_Op op} , ${9:MPI_Win win});"]
+},
+
+"MPI_Add_error_class": {
+	"scope": "c,cpp",
+	"prefix": ["MPI_Add_error_class"],
+	"description" : "MPI Add_error_class Snippet",
+	"body" : [ "MPI_Add_error_class( ${1:int* errorclass});"]
+},
+
+"MPI_Add_error_code": {
+	"scope": "c,cpp",
+	"prefix": ["MPI_Add_error_code"],
+	"description" : "MPI Add_error_code Snippet",
+	"body" : [ "MPI_Add_error_code( ${1:int errorclass} , ${2:int* errorcode});"]
+},
+
+"MPI_Add_error_string": {
+	"scope": "c,cpp",
+	"prefix": ["MPI_Add_error_string"],
+	"description" : "MPI Add_error_string Snippet",
+	"body" : [ "MPI_Add_error_string( ${1:int errorcode} , ${2:const char* string});"]
+},
+
+"MPI_Aint_add": {
+	"scope": "c,cpp",
+	"prefix": ["MPI_Aint_add"],
+	"description" : "MPI Aint_add Snippet",
+	"body" : [ "MPI_Aint_add( ${1:MPI_Aint base} , ${2:MPI_Aint disp});"]
+},
+
+"MPI_Aint_diff": {
+	"scope": "c,cpp",
+	"prefix": ["MPI_Aint_diff"],
+	"description" : "MPI Aint_diff Snippet",
+	"body" : [ "MPI_Aint_diff( ${1:MPI_Aint addr1} , ${2:MPI_Aint addr2});"]
+},
+
+"MPI_Allgather": {
+	"scope": "c,cpp",
+	"prefix": ["MPI_Allgather"],
+	"description" : "MPI Allgather Snippet",
+	"body" : [ "MPI_Allgather( ${1:const void* sendbuf} , ${2:MPI_Count sendcount} , ${3:MPI_Datatype sendtype} , ${4:void* recvbuf} , ${5:MPI_Count recvcount} , ${6:MPI_Datatype recvtype} , ${7:MPI_Comm comm});"]
+},
+
+"MPI_Allgather_init": {
+	"scope": "c,cpp",
+	"prefix": ["MPI_Allgather_init"],
+	"description" : "MPI Allgather_init Snippet",
+	"body" : [ "MPI_Allgather_init( ${1:const void* sendbuf} , ${2:MPI_Count sendcount} , ${3:MPI_Datatype sendtype} , ${4:void* recvbuf} , ${5:MPI_Count recvcount} , ${6:MPI_Datatype recvtype} , ${7:MPI_Comm comm} , ${8:MPI_Info info} , ${9:MPI_Request* request});"]
+},
+
+"MPI_Allgatherv": {
+	"scope": "c,cpp",
+	"prefix": ["MPI_Allgatherv"],
+	"description" : "MPI Allgatherv Snippet",
+	"body" : [ "MPI_Allgatherv( ${1:const void* sendbuf} , ${2:MPI_Count sendcount} , ${3:MPI_Datatype sendtype} , ${4:void* recvbuf} , ${5:const MPI_Count recvcounts[]} , ${6:const MPI_Aint displs[]} , ${7:MPI_Datatype recvtype} , ${8:MPI_Comm comm});"]
+},
+
+"MPI_Allgatherv_init": {
+	"scope": "c,cpp",
+	"prefix": ["MPI_Allgatherv_init"],
+	"description" : "MPI Allgatherv_init Snippet",
+	"body" : [ "MPI_Allgatherv_init( ${1:const void* sendbuf} , ${2:MPI_Count sendcount} , ${3:MPI_Datatype sendtype} , ${4:void* recvbuf} , ${5:const MPI_Count recvcounts[]} , ${6:const MPI_Aint displs[]} , ${7:MPI_Datatype recvtype} , ${8:MPI_Comm comm} , ${9:MPI_Info info} , ${10:MPI_Request* request});"]
+},
+
+"MPI_Alloc_mem": {
+	"scope": "c,cpp",
+	"prefix": ["MPI_Alloc_mem"],
+	"description" : "MPI Alloc_mem Snippet",
+	"body" : [ "MPI_Alloc_mem( ${1:MPI_Aint size} , ${2:MPI_Info info} , ${3:void* baseptr});"]
+},
+
+"MPI_Allreduce": {
+	"scope": "c,cpp",
+	"prefix": ["MPI_Allreduce"],
+	"description" : "MPI Allreduce Snippet",
+	"body" : [ "MPI_Allreduce( ${1:const void* sendbuf} , ${2:void* recvbuf} , ${3:MPI_Count count} , ${4:MPI_Datatype datatype} , ${5:MPI_Op op} , ${6:MPI_Comm comm});"]
+},
+
+"MPI_Allreduce_init": {
+	"scope": "c,cpp",
+	"prefix": ["MPI_Allreduce_init"],
+	"description" : "MPI Allreduce_init Snippet",
+	"body" : [ "MPI_Allreduce_init( ${1:const void* sendbuf} , ${2:void* recvbuf} , ${3:MPI_Count count} , ${4:MPI_Datatype datatype} , ${5:MPI_Op op} , ${6:MPI_Comm comm} , ${7:MPI_Info info} , ${8:MPI_Request* request});"]
+},
+
+"MPI_Alltoall": {
+	"scope": "c,cpp",
+	"prefix": ["MPI_Alltoall"],
+	"description" : "MPI Alltoall Snippet",
+	"body" : [ "MPI_Alltoall( ${1:const void* sendbuf} , ${2:MPI_Count sendcount} , ${3:MPI_Datatype sendtype} , ${4:void* recvbuf} , ${5:MPI_Count recvcount} , ${6:MPI_Datatype recvtype} , ${7:MPI_Comm comm});"]
+},
+
+"MPI_Alltoall_init": {
+	"scope": "c,cpp",
+	"prefix": ["MPI_Alltoall_init"],
+	"description" : "MPI Alltoall_init Snippet",
+	"body" : [ "MPI_Alltoall_init( ${1:const void* sendbuf} , ${2:MPI_Count sendcount} , ${3:MPI_Datatype sendtype} , ${4:void* recvbuf} , ${5:MPI_Count recvcount} , ${6:MPI_Datatype recvtype} , ${7:MPI_Comm comm} , ${8:MPI_Info info} , ${9:MPI_Request* request});"]
+},
+
+"MPI_Alltoallv": {
+	"scope": "c,cpp",
+	"prefix": ["MPI_Alltoallv"],
+	"description" : "MPI Alltoallv Snippet",
+	"body" : [ "MPI_Alltoallv( ${1:const void* sendbuf} , ${2:const MPI_Count sendcounts[]} , ${3:const MPI_Aint sdispls[]} , ${4:MPI_Datatype sendtype} , ${5:void* recvbuf} , ${6:const MPI_Count recvcounts[]} , ${7:const MPI_Aint rdispls[]} , ${8:MPI_Datatype recvtype} , ${9:MPI_Comm comm});"]
+},
+
+"MPI_Alltoallv_init": {
+	"scope": "c,cpp",
+	"prefix": ["MPI_Alltoallv_init"],
+	"description" : "MPI Alltoallv_init Snippet",
+	"body" : [ "MPI_Alltoallv_init( ${1:const void* sendbuf} , ${2:const MPI_Count sendcounts[]} , ${3:const MPI_Aint sdispls[]} , ${4:MPI_Datatype sendtype} , ${5:void* recvbuf} , ${6:const MPI_Count recvcounts[]} , ${7:const MPI_Aint rdispls[]} , ${8:MPI_Datatype recvtype} , ${9:MPI_Comm comm} , ${10:MPI_Info info} , ${11:MPI_Request* request});"]
+},
+
+"MPI_Alltoallw": {
+	"scope": "c,cpp",
+	"prefix": ["MPI_Alltoallw"],
+	"description" : "MPI Alltoallw Snippet",
+	"body" : [ "MPI_Alltoallw( ${1:const void* sendbuf} , ${2:const MPI_Count sendcounts[]} , ${3:const MPI_Aint sdispls[]} , ${4:const MPI_Datatype sendtypes[]} , ${5:void* recvbuf} , ${6:const MPI_Count recvcounts[]} , ${7:const MPI_Aint rdispls[]} , ${8:const MPI_Datatype recvtypes[]} , ${9:MPI_Comm comm});"]
+},
+
+"MPI_Alltoallw_init": {
+	"scope": "c,cpp",
+	"prefix": ["MPI_Alltoallw_init"],
+	"description" : "MPI Alltoallw_init Snippet",
+	"body" : [ "MPI_Alltoallw_init( ${1:const void* sendbuf} , ${2:const MPI_Count sendcounts[]} , ${3:const MPI_Aint sdispls[]} , ${4:const MPI_Datatype sendtypes[]} , ${5:void* recvbuf} , ${6:const MPI_Count recvcounts[]} , ${7:const MPI_Aint rdispls[]} , ${8:const MPI_Datatype recvtypes[]} , ${9:MPI_Comm comm} , ${10:MPI_Info info} , ${11:MPI_Request* request});"]
+},
+
+"MPI_Attr_delete": {
+	"scope": "c,cpp",
+	"prefix": ["MPI_Attr_delete"],
+	"description" : "MPI Attr_delete Snippet",
+	"body" : [ "MPI_Attr_delete( ${1:MPI_Comm comm} , ${2:int keyval});"]
+},
+
+"MPI_Attr_get": {
+	"scope": "c,cpp",
+	"prefix": ["MPI_Attr_get"],
+	"description" : "MPI Attr_get Snippet",
+	"body" : [ "MPI_Attr_get( ${1:MPI_Comm comm} , ${2:int keyval} , ${3:void* attribute_val} , ${4:int* flag});"]
+},
+
+"MPI_Attr_put": {
+	"scope": "c,cpp",
+	"prefix": ["MPI_Attr_put"],
+	"description" : "MPI Attr_put Snippet",
+	"body" : [ "MPI_Attr_put( ${1:MPI_Comm comm} , ${2:int keyval} , ${3:void* attribute_val});"]
+},
+
+"MPI_Barrier": {
+	"scope": "c,cpp",
+	"prefix": ["MPI_Barrier"],
+	"description" : "MPI Barrier Snippet",
+	"body" : [ "MPI_Barrier( ${1:MPI_Comm comm});"]
+},
+
+"MPI_Barrier_init": {
+	"scope": "c,cpp",
+	"prefix": ["MPI_Barrier_init"],
+	"description" : "MPI Barrier_init Snippet",
+	"body" : [ "MPI_Barrier_init( ${1:MPI_Comm comm} , ${2:MPI_Info info} , ${3:MPI_Request* request});"]
+},
+
+"MPI_Bcast": {
+	"scope": "c,cpp",
+	"prefix": ["MPI_Bcast"],
+	"description" : "MPI Bcast Snippet",
+	"body" : [ "MPI_Bcast( ${1:void* buffer} , ${2:MPI_Count count} , ${3:MPI_Datatype datatype} , ${4:int root} , ${5:MPI_Comm comm});"]
+},
+
+"MPI_Bcast_init": {
+	"scope": "c,cpp",
+	"prefix": ["MPI_Bcast_init"],
+	"description" : "MPI Bcast_init Snippet",
+	"body" : [ "MPI_Bcast_init( ${1:void* buffer} , ${2:MPI_Count count} , ${3:MPI_Datatype datatype} , ${4:int root} , ${5:MPI_Comm comm} , ${6:MPI_Info info} , ${7:MPI_Request* request});"]
+},
+
+"MPI_Bsend": {
+	"scope": "c,cpp",
+	"prefix": ["MPI_Bsend"],
+	"description" : "MPI Bsend Snippet",
+	"body" : [ "MPI_Bsend( ${1:const void* buf} , ${2:MPI_Count count} , ${3:MPI_Datatype datatype} , ${4:int dest} , ${5:int tag} , ${6:MPI_Comm comm});"]
+},
+
+"MPI_Bsend_init": {
+	"scope": "c,cpp",
+	"prefix": ["MPI_Bsend_init"],
+	"description" : "MPI Bsend_init Snippet",
+	"body" : [ "MPI_Bsend_init( ${1:const void* buf} , ${2:MPI_Count count} , ${3:MPI_Datatype datatype} , ${4:int dest} , ${5:int tag} , ${6:MPI_Comm comm} , ${7:MPI_Request* request});"]
+},
+
+"MPI_Buffer_attach": {
+	"scope": "c,cpp",
+	"prefix": ["MPI_Buffer_attach"],
+	"description" : "MPI Buffer_attach Snippet",
+	"body" : [ "MPI_Buffer_attach( ${1:void* buffer} , ${2:MPI_Count size});"]
+},
+
+"MPI_Buffer_detach": {
+	"scope": "c,cpp",
+	"prefix": ["MPI_Buffer_detach"],
+	"description" : "MPI Buffer_detach Snippet",
+	"body" : [ "MPI_Buffer_detach( ${1:void* buffer_addr} , ${2:MPI_Count* size});"]
+},
+
+"MPI_Cancel": {
+	"scope": "c,cpp",
+	"prefix": ["MPI_Cancel"],
+	"description" : "MPI Cancel Snippet",
+	"body" : [ "MPI_Cancel( ${1:MPI_Request* request});"]
+},
+
+"MPI_Cart_coords": {
+	"scope": "c,cpp",
+	"prefix": ["MPI_Cart_coords"],
+	"description" : "MPI Cart_coords Snippet",
+	"body" : [ "MPI_Cart_coords( ${1:MPI_Comm comm} , ${2:int rank} , ${3:int maxdims} , ${4:int coords[]});"]
+},
+
+"MPI_Cart_create": {
+	"scope": "c,cpp",
+	"prefix": ["MPI_Cart_create"],
+	"description" : "MPI Cart_create Snippet",
+	"body" : [ "MPI_Cart_create( ${1:MPI_Comm comm_old} , ${2:int ndims} , ${3:const int dims[]} , ${4:const int periods[]} , ${5:int reorder} , ${6:MPI_Comm* comm_cart});"]
+},
+
+"MPI_Cart_get": {
+	"scope": "c,cpp",
+	"prefix": ["MPI_Cart_get"],
+	"description" : "MPI Cart_get Snippet",
+	"body" : [ "MPI_Cart_get( ${1:MPI_Comm comm} , ${2:int maxdims} , ${3:int dims[]} , ${4:int periods[]} , ${5:int coords[]});"]
+},
+
+"MPI_Cart_map": {
+	"scope": "c,cpp",
+	"prefix": ["MPI_Cart_map"],
+	"description" : "MPI Cart_map Snippet",
+	"body" : [ "MPI_Cart_map( ${1:MPI_Comm comm} , ${2:int ndims} , ${3:const int dims[]} , ${4:const int periods[]} , ${5:int* newrank});"]
+},
+
+"MPI_Cart_rank": {
+	"scope": "c,cpp",
+	"prefix": ["MPI_Cart_rank"],
+	"description" : "MPI Cart_rank Snippet",
+	"body" : [ "MPI_Cart_rank( ${1:MPI_Comm comm} , ${2:const int coords[]} , ${3:int* rank});"]
+},
+
+"MPI_Cart_shift": {
+	"scope": "c,cpp",
+	"prefix": ["MPI_Cart_shift"],
+	"description" : "MPI Cart_shift Snippet",
+	"body" : [ "MPI_Cart_shift( ${1:MPI_Comm comm} , ${2:int direction} , ${3:int disp} , ${4:int* rank_source} , ${5:int* rank_dest});"]
+},
+
+"MPI_Cart_sub": {
+	"scope": "c,cpp",
+	"prefix": ["MPI_Cart_sub"],
+	"description" : "MPI Cart_sub Snippet",
+	"body" : [ "MPI_Cart_sub( ${1:MPI_Comm comm} , ${2:const int remain_dims[]} , ${3:MPI_Comm* newcomm});"]
+},
+
+"MPI_Cartdim_get": {
+	"scope": "c,cpp",
+	"prefix": ["MPI_Cartdim_get"],
+	"description" : "MPI Cartdim_get Snippet",
+	"body" : [ "MPI_Cartdim_get( ${1:MPI_Comm comm} , ${2:int* ndims});"]
+},
+
+"MPI_Close_port": {
+	"scope": "c,cpp",
+	"prefix": ["MPI_Close_port"],
+	"description" : "MPI Close_port Snippet",
+	"body" : [ "MPI_Close_port( ${1:const char* port_name});"]
+},
+
+"MPI_Comm_accept": {
+	"scope": "c,cpp",
+	"prefix": ["MPI_Comm_accept"],
+	"description" : "MPI Comm_accept Snippet",
+	"body" : [ "MPI_Comm_accept( ${1:const char* port_name} , ${2:MPI_Info info} , ${3:int root} , ${4:MPI_Comm comm} , ${5:MPI_Comm* newcomm});"]
+},
+
+"MPI_Comm_call_errhandler": {
+	"scope": "c,cpp",
+	"prefix": ["MPI_Comm_call_errhandler"],
+	"description" : "MPI Comm_call_errhandler Snippet",
+	"body" : [ "MPI_Comm_call_errhandler( ${1:MPI_Comm comm} , ${2:int errorcode});"]
+},
+
+"MPI_Comm_compare": {
+	"scope": "c,cpp",
+	"prefix": ["MPI_Comm_compare"],
+	"description" : "MPI Comm_compare Snippet",
+	"body" : [ "MPI_Comm_compare( ${1:MPI_Comm comm1} , ${2:MPI_Comm comm2} , ${3:int* result});"]
+},
+
+"MPI_Comm_connect": {
+	"scope": "c,cpp",
+	"prefix": ["MPI_Comm_connect"],
+	"description" : "MPI Comm_connect Snippet",
+	"body" : [ "MPI_Comm_connect( ${1:const char* port_name} , ${2:MPI_Info info} , ${3:int root} , ${4:MPI_Comm comm} , ${5:MPI_Comm* newcomm});"]
+},
+
+"MPI_Comm_create": {
+	"scope": "c,cpp",
+	"prefix": ["MPI_Comm_create"],
+	"description" : "MPI Comm_create Snippet",
+	"body" : [ "MPI_Comm_create( ${1:MPI_Comm comm} , ${2:MPI_Group group} , ${3:MPI_Comm* newcomm});"]
+},
+
+"MPI_Comm_create_errhandler": {
+	"scope": "c,cpp",
+	"prefix": ["MPI_Comm_create_errhandler"],
+	"description" : "MPI Comm_create_errhandler Snippet",
+	"body" : [ "MPI_Comm_create_errhandler( ${1:MPI_Comm_errhandler_function* comm_errhandler_fn} , ${2:MPI_Errhandler* errhandler});"]
+},
+
+"MPI_Comm_create_from_group": {
+	"scope": "c,cpp",
+	"prefix": ["MPI_Comm_create_from_group"],
+	"description" : "MPI Comm_create_from_group Snippet",
+	"body" : [ "MPI_Comm_create_from_group( ${1:MPI_Group group} , ${2:const char* stringtag} , ${3:MPI_Info info} , ${4:MPI_Errhandler errhandler} , ${5:MPI_Comm* newcomm});"]
+},
+
+"MPI_Comm_create_group": {
+	"scope": "c,cpp",
+	"prefix": ["MPI_Comm_create_group"],
+	"description" : "MPI Comm_create_group Snippet",
+	"body" : [ "MPI_Comm_create_group( ${1:MPI_Comm comm} , ${2:MPI_Group group} , ${3:int tag} , ${4:MPI_Comm* newcomm});"]
+},
+
+"MPI_Comm_create_keyval": {
+	"scope": "c,cpp",
+	"prefix": ["MPI_Comm_create_keyval"],
+	"description" : "MPI Comm_create_keyval Snippet",
+	"body" : [ "MPI_Comm_create_keyval( ${1:MPI_Comm_copy_attr_function* comm_copy_attr_fn} , ${2:MPI_Comm_delete_attr_function* comm_delete_attr_fn} , ${3:int* comm_keyval} , ${4:void* extra_state});"]
+},
+
+"MPI_Comm_delete_attr": {
+	"scope": "c,cpp",
+	"prefix": ["MPI_Comm_delete_attr"],
+	"description" : "MPI Comm_delete_attr Snippet",
+	"body" : [ "MPI_Comm_delete_attr( ${1:MPI_Comm comm} , ${2:int comm_keyval});"]
+},
+
+"MPI_Comm_disconnect": {
+	"scope": "c,cpp",
+	"prefix": ["MPI_Comm_disconnect"],
+	"description" : "MPI Comm_disconnect Snippet",
+	"body" : [ "MPI_Comm_disconnect( ${1:MPI_Comm* comm});"]
+},
+
+"MPI_Comm_dup": {
+	"scope": "c,cpp",
+	"prefix": ["MPI_Comm_dup"],
+	"description" : "MPI Comm_dup Snippet",
+	"body" : [ "MPI_Comm_dup( ${1:MPI_Comm comm} , ${2:MPI_Comm* newcomm});"]
+},
+
+"MPI_Comm_dup_with_info": {
+	"scope": "c,cpp",
+	"prefix": ["MPI_Comm_dup_with_info"],
+	"description" : "MPI Comm_dup_with_info Snippet",
+	"body" : [ "MPI_Comm_dup_with_info( ${1:MPI_Comm comm} , ${2:MPI_Info info} , ${3:MPI_Comm* newcomm});"]
+},
+
+"MPI_Comm_free": {
+	"scope": "c,cpp",
+	"prefix": ["MPI_Comm_free"],
+	"description" : "MPI Comm_free Snippet",
+	"body" : [ "MPI_Comm_free( ${1:MPI_Comm* comm});"]
+},
+
+"MPI_Comm_free_keyval": {
+	"scope": "c,cpp",
+	"prefix": ["MPI_Comm_free_keyval"],
+	"description" : "MPI Comm_free_keyval Snippet",
+	"body" : [ "MPI_Comm_free_keyval( ${1:int* comm_keyval});"]
+},
+
+"MPI_Comm_get_attr": {
+	"scope": "c,cpp",
+	"prefix": ["MPI_Comm_get_attr"],
+	"description" : "MPI Comm_get_attr Snippet",
+	"body" : [ "MPI_Comm_get_attr( ${1:MPI_Comm comm} , ${2:int comm_keyval} , ${3:void* attribute_val} , ${4:int* flag});"]
+},
+
+"MPI_Comm_get_errhandler": {
+	"scope": "c,cpp",
+	"prefix": ["MPI_Comm_get_errhandler"],
+	"description" : "MPI Comm_get_errhandler Snippet",
+	"body" : [ "MPI_Comm_get_errhandler( ${1:MPI_Comm comm} , ${2:MPI_Errhandler* errhandler});"]
+},
+
+"MPI_Comm_get_info": {
+	"scope": "c,cpp",
+	"prefix": ["MPI_Comm_get_info"],
+	"description" : "MPI Comm_get_info Snippet",
+	"body" : [ "MPI_Comm_get_info( ${1:MPI_Comm comm} , ${2:MPI_Info* info_used});"]
+},
+
+"MPI_Comm_get_name": {
+	"scope": "c,cpp",
+	"prefix": ["MPI_Comm_get_name"],
+	"description" : "MPI Comm_get_name Snippet",
+	"body" : [ "MPI_Comm_get_name( ${1:MPI_Comm comm} , ${2:char* comm_name} , ${3:int* resultlen});"]
+},
+
+"MPI_Comm_get_parent": {
+	"scope": "c,cpp",
+	"prefix": ["MPI_Comm_get_parent"],
+	"description" : "MPI Comm_get_parent Snippet",
+	"body" : [ "MPI_Comm_get_parent( ${1:MPI_Comm* parent});"]
+},
+
+"MPI_Comm_group": {
+	"scope": "c,cpp",
+	"prefix": ["MPI_Comm_group"],
+	"description" : "MPI Comm_group Snippet",
+	"body" : [ "MPI_Comm_group( ${1:MPI_Comm comm} , ${2:MPI_Group* group});"]
+},
+
+"MPI_Comm_idup": {
+	"scope": "c,cpp",
+	"prefix": ["MPI_Comm_idup"],
+	"description" : "MPI Comm_idup Snippet",
+	"body" : [ "MPI_Comm_idup( ${1:MPI_Comm comm} , ${2:MPI_Comm* newcomm} , ${3:MPI_Request* request});"]
+},
+
+"MPI_Comm_idup_with_info": {
+	"scope": "c,cpp",
+	"prefix": ["MPI_Comm_idup_with_info"],
+	"description" : "MPI Comm_idup_with_info Snippet",
+	"body" : [ "MPI_Comm_idup_with_info( ${1:MPI_Comm comm} , ${2:MPI_Info info} , ${3:MPI_Comm* newcomm} , ${4:MPI_Request* request});"]
+},
+
+"MPI_Comm_join": {
+	"scope": "c,cpp",
+	"prefix": ["MPI_Comm_join"],
+	"description" : "MPI Comm_join Snippet",
+	"body" : [ "MPI_Comm_join( ${1:int fd} , ${2:MPI_Comm* intercomm});"]
+},
+
+"MPI_Comm_rank": {
+	"scope": "c,cpp",
+	"prefix": ["MPI_Comm_rank"],
+	"description" : "MPI Comm_rank Snippet",
+	"body" : [ "MPI_Comm_rank( ${1:MPI_Comm comm} , ${2:int* rank});"]
+},
+
+"MPI_Comm_remote_group": {
+	"scope": "c,cpp",
+	"prefix": ["MPI_Comm_remote_group"],
+	"description" : "MPI Comm_remote_group Snippet",
+	"body" : [ "MPI_Comm_remote_group( ${1:MPI_Comm comm} , ${2:MPI_Group* group});"]
+},
+
+"MPI_Comm_remote_size": {
+	"scope": "c,cpp",
+	"prefix": ["MPI_Comm_remote_size"],
+	"description" : "MPI Comm_remote_size Snippet",
+	"body" : [ "MPI_Comm_remote_size( ${1:MPI_Comm comm} , ${2:int* size});"]
+},
+
+"MPI_Comm_set_attr": {
+	"scope": "c,cpp",
+	"prefix": ["MPI_Comm_set_attr"],
+	"description" : "MPI Comm_set_attr Snippet",
+	"body" : [ "MPI_Comm_set_attr( ${1:MPI_Comm comm} , ${2:int comm_keyval} , ${3:void* attribute_val});"]
+},
+
+"MPI_Comm_set_errhandler": {
+	"scope": "c,cpp",
+	"prefix": ["MPI_Comm_set_errhandler"],
+	"description" : "MPI Comm_set_errhandler Snippet",
+	"body" : [ "MPI_Comm_set_errhandler( ${1:MPI_Comm comm} , ${2:MPI_Errhandler errhandler});"]
+},
+
+"MPI_Comm_set_info": {
+	"scope": "c,cpp",
+	"prefix": ["MPI_Comm_set_info"],
+	"description" : "MPI Comm_set_info Snippet",
+	"body" : [ "MPI_Comm_set_info( ${1:MPI_Comm comm} , ${2:MPI_Info info});"]
+},
+
+"MPI_Comm_set_name": {
+	"scope": "c,cpp",
+	"prefix": ["MPI_Comm_set_name"],
+	"description" : "MPI Comm_set_name Snippet",
+	"body" : [ "MPI_Comm_set_name( ${1:MPI_Comm comm} , ${2:const char* comm_name});"]
+},
+
+"MPI_Comm_size": {
+	"scope": "c,cpp",
+	"prefix": ["MPI_Comm_size"],
+	"description" : "MPI Comm_size Snippet",
+	"body" : [ "MPI_Comm_size( ${1:MPI_Comm comm} , ${2:int* size});"]
+},
+
+"MPI_Comm_spawn": {
+	"scope": "c,cpp",
+	"prefix": ["MPI_Comm_spawn"],
+	"description" : "MPI Comm_spawn Snippet",
+	"body" : [ "MPI_Comm_spawn( ${1:const char* command} , ${2:char* argv[]} , ${3:int maxprocs} , ${4:MPI_Info info} , ${5:int root} , ${6:MPI_Comm comm} , ${7:MPI_Comm* intercomm} , ${8:int array_of_errcodes[]});"]
+},
+
+"MPI_Comm_spawn_multiple": {
+	"scope": "c,cpp",
+	"prefix": ["MPI_Comm_spawn_multiple"],
+	"description" : "MPI Comm_spawn_multiple Snippet",
+	"body" : [ "MPI_Comm_spawn_multiple( ${1:int count} , ${2:char* array_of_commands[]} , ${3:char** array_of_argv[]} , ${4:const int array_of_maxprocs[]} , ${5:const MPI_Info array_of_info[]} , ${6:int root} , ${7:MPI_Comm comm} , ${8:MPI_Comm* intercomm} , ${9:int array_of_errcodes[]});"]
+},
+
+"MPI_Comm_split": {
+	"scope": "c,cpp",
+	"prefix": ["MPI_Comm_split"],
+	"description" : "MPI Comm_split Snippet",
+	"body" : [ "MPI_Comm_split( ${1:MPI_Comm comm} , ${2:int color} , ${3:int key} , ${4:MPI_Comm* newcomm});"]
+},
+
+"MPI_Comm_split_type": {
+	"scope": "c,cpp",
+	"prefix": ["MPI_Comm_split_type"],
+	"description" : "MPI Comm_split_type Snippet",
+	"body" : [ "MPI_Comm_split_type( ${1:MPI_Comm comm} , ${2:int split_type} , ${3:int key} , ${4:MPI_Info info} , ${5:MPI_Comm* newcomm});"]
+},
+
+"MPI_Comm_test_inter": {
+	"scope": "c,cpp",
+	"prefix": ["MPI_Comm_test_inter"],
+	"description" : "MPI Comm_test_inter Snippet",
+	"body" : [ "MPI_Comm_test_inter( ${1:MPI_Comm comm} , ${2:int* flag});"]
+},
+
+"MPI_Compare_and_swap": {
+	"scope": "c,cpp",
+	"prefix": ["MPI_Compare_and_swap"],
+	"description" : "MPI Compare_and_swap Snippet",
+	"body" : [ "MPI_Compare_and_swap( ${1:const void* origin_addr} , ${2:const void* compare_addr} , ${3:void* result_addr} , ${4:MPI_Datatype datatype} , ${5:int target_rank} , ${6:MPI_Aint target_disp} , ${7:MPI_Win win});"]
+},
+
+"MPI_Dims_create": {
+	"scope": "c,cpp",
+	"prefix": ["MPI_Dims_create"],
+	"description" : "MPI Dims_create Snippet",
+	"body" : [ "MPI_Dims_create( ${1:int nnodes} , ${2:int ndims} , ${3:int dims[]});"]
+},
+
+"MPI_Dist_graph_create": {
+	"scope": "c,cpp",
+	"prefix": ["MPI_Dist_graph_create"],
+	"description" : "MPI Dist_graph_create Snippet",
+	"body" : [ "MPI_Dist_graph_create( ${1:MPI_Comm comm_old} , ${2:int n} , ${3:const int sources[]} , ${4:const int degrees[]} , ${5:const int destinations[]} , ${6:const int weights[]} , ${7:MPI_Info info} , ${8:int reorder} , ${9:MPI_Comm* comm_dist_graph});"]
+},
+
+"MPI_Dist_graph_create_adjacent": {
+	"scope": "c,cpp",
+	"prefix": ["MPI_Dist_graph_create_adjacent"],
+	"description" : "MPI Dist_graph_create_adjacent Snippet",
+	"body" : [ "MPI_Dist_graph_create_adjacent( ${1:MPI_Comm comm_old} , ${2:int indegree} , ${3:const int sources[]} , ${4:const int sourceweights[]} , ${5:int outdegree} , ${6:const int destinations[]} , ${7:const int destweights[]} , ${8:MPI_Info info} , ${9:int reorder} , ${10:MPI_Comm* comm_dist_graph});"]
+},
+
+"MPI_Dist_graph_neighbors": {
+	"scope": "c,cpp",
+	"prefix": ["MPI_Dist_graph_neighbors"],
+	"description" : "MPI Dist_graph_neighbors Snippet",
+	"body" : [ "MPI_Dist_graph_neighbors( ${1:MPI_Comm comm} , ${2:int maxindegree} , ${3:int sources[]} , ${4:int sourceweights[]} , ${5:int maxoutdegree} , ${6:int destinations[]} , ${7:int destweights[]});"]
+},
+
+"MPI_Dist_graph_neighbors_count": {
+	"scope": "c,cpp",
+	"prefix": ["MPI_Dist_graph_neighbors_count"],
+	"description" : "MPI Dist_graph_neighbors_count Snippet",
+	"body" : [ "MPI_Dist_graph_neighbors_count( ${1:MPI_Comm comm} , ${2:int* indegree} , ${3:int* outdegree} , ${4:int* weighted});"]
+},
+
+"MPI_Errhandler_free": {
+	"scope": "c,cpp",
+	"prefix": ["MPI_Errhandler_free"],
+	"description" : "MPI Errhandler_free Snippet",
+	"body" : [ "MPI_Errhandler_free( ${1:MPI_Errhandler* errhandler});"]
+},
+
+"MPI_Error_class": {
+	"scope": "c,cpp",
+	"prefix": ["MPI_Error_class"],
+	"description" : "MPI Error_class Snippet",
+	"body" : [ "MPI_Error_class( ${1:int errorcode} , ${2:int* errorclass});"]
+},
+
+"MPI_Error_string": {
+	"scope": "c,cpp",
+	"prefix": ["MPI_Error_string"],
+	"description" : "MPI Error_string Snippet",
+	"body" : [ "MPI_Error_string( ${1:int errorcode} , ${2:char* string} , ${3:int* resultlen});"]
+},
+
+"MPI_Exscan": {
+	"scope": "c,cpp",
+	"prefix": ["MPI_Exscan"],
+	"description" : "MPI Exscan Snippet",
+	"body" : [ "MPI_Exscan( ${1:const void* sendbuf} , ${2:void* recvbuf} , ${3:MPI_Count count} , ${4:MPI_Datatype datatype} , ${5:MPI_Op op} , ${6:MPI_Comm comm});"]
+},
+
+"MPI_Exscan_init": {
+	"scope": "c,cpp",
+	"prefix": ["MPI_Exscan_init"],
+	"description" : "MPI Exscan_init Snippet",
+	"body" : [ "MPI_Exscan_init( ${1:const void* sendbuf} , ${2:void* recvbuf} , ${3:MPI_Count count} , ${4:MPI_Datatype datatype} , ${5:MPI_Op op} , ${6:MPI_Comm comm} , ${7:MPI_Info info} , ${8:MPI_Request* request});"]
+},
+
+"MPI_Fetch_and_op": {
+	"scope": "c,cpp",
+	"prefix": ["MPI_Fetch_and_op"],
+	"description" : "MPI Fetch_and_op Snippet",
+	"body" : [ "MPI_Fetch_and_op( ${1:const void* origin_addr} , ${2:void* result_addr} , ${3:MPI_Datatype datatype} , ${4:int target_rank} , ${5:MPI_Aint target_disp} , ${6:MPI_Op op} , ${7:MPI_Win win});"]
+},
+
+"MPI_File_call_errhandler": {
+	"scope": "c,cpp",
+	"prefix": ["MPI_File_call_errhandler"],
+	"description" : "MPI File_call_errhandler Snippet",
+	"body" : [ "MPI_File_call_errhandler( ${1:MPI_File fh} , ${2:int errorcode});"]
+},
+
+"MPI_File_close": {
+	"scope": "c,cpp",
+	"prefix": ["MPI_File_close"],
+	"description" : "MPI File_close Snippet",
+	"body" : [ "MPI_File_close( ${1:MPI_File* fh});"]
+},
+
+"MPI_File_create_errhandler": {
+	"scope": "c,cpp",
+	"prefix": ["MPI_File_create_errhandler"],
+	"description" : "MPI File_create_errhandler Snippet",
+	"body" : [ "MPI_File_create_errhandler( ${1:MPI_File_errhandler_function* file_errhandler_fn} , ${2:MPI_Errhandler* errhandler});"]
+},
+
+"MPI_File_delete": {
+	"scope": "c,cpp",
+	"prefix": ["MPI_File_delete"],
+	"description" : "MPI File_delete Snippet",
+	"body" : [ "MPI_File_delete( ${1:const char* filename} , ${2:MPI_Info info});"]
+},
+
+"MPI_File_get_amode": {
+	"scope": "c,cpp",
+	"prefix": ["MPI_File_get_amode"],
+	"description" : "MPI File_get_amode Snippet",
+	"body" : [ "MPI_File_get_amode( ${1:MPI_File fh} , ${2:int* amode});"]
+},
+
+"MPI_File_get_atomicity": {
+	"scope": "c,cpp",
+	"prefix": ["MPI_File_get_atomicity"],
+	"description" : "MPI File_get_atomicity Snippet",
+	"body" : [ "MPI_File_get_atomicity( ${1:MPI_File fh} , ${2:int* flag});"]
+},
+
+"MPI_File_get_byte_offset": {
+	"scope": "c,cpp",
+	"prefix": ["MPI_File_get_byte_offset"],
+	"description" : "MPI File_get_byte_offset Snippet",
+	"body" : [ "MPI_File_get_byte_offset( ${1:MPI_File fh} , ${2:MPI_Offset offset} , ${3:MPI_Offset* disp});"]
+},
+
+"MPI_File_get_errhandler": {
+	"scope": "c,cpp",
+	"prefix": ["MPI_File_get_errhandler"],
+	"description" : "MPI File_get_errhandler Snippet",
+	"body" : [ "MPI_File_get_errhandler( ${1:MPI_File file} , ${2:MPI_Errhandler* errhandler});"]
+},
+
+"MPI_File_get_group": {
+	"scope": "c,cpp",
+	"prefix": ["MPI_File_get_group"],
+	"description" : "MPI File_get_group Snippet",
+	"body" : [ "MPI_File_get_group( ${1:MPI_File fh} , ${2:MPI_Group* group});"]
+},
+
+"MPI_File_get_info": {
+	"scope": "c,cpp",
+	"prefix": ["MPI_File_get_info"],
+	"description" : "MPI File_get_info Snippet",
+	"body" : [ "MPI_File_get_info( ${1:MPI_File fh} , ${2:MPI_Info* info_used});"]
+},
+
+"MPI_File_get_position": {
+	"scope": "c,cpp",
+	"prefix": ["MPI_File_get_position"],
+	"description" : "MPI File_get_position Snippet",
+	"body" : [ "MPI_File_get_position( ${1:MPI_File fh} , ${2:MPI_Offset* offset});"]
+},
+
+"MPI_File_get_position_shared": {
+	"scope": "c,cpp",
+	"prefix": ["MPI_File_get_position_shared"],
+	"description" : "MPI File_get_position_shared Snippet",
+	"body" : [ "MPI_File_get_position_shared( ${1:MPI_File fh} , ${2:MPI_Offset* offset});"]
+},
+
+"MPI_File_get_size": {
+	"scope": "c,cpp",
+	"prefix": ["MPI_File_get_size"],
+	"description" : "MPI File_get_size Snippet",
+	"body" : [ "MPI_File_get_size( ${1:MPI_File fh} , ${2:MPI_Offset* size});"]
+},
+
+"MPI_File_get_type_extent": {
+	"scope": "c,cpp",
+	"prefix": ["MPI_File_get_type_extent"],
+	"description" : "MPI File_get_type_extent Snippet",
+	"body" : [ "MPI_File_get_type_extent( ${1:MPI_File fh} , ${2:MPI_Datatype datatype} , ${3:MPI_Count* extent});"]
+},
+
+"MPI_File_get_view": {
+	"scope": "c,cpp",
+	"prefix": ["MPI_File_get_view"],
+	"description" : "MPI File_get_view Snippet",
+	"body" : [ "MPI_File_get_view( ${1:MPI_File fh} , ${2:MPI_Offset* disp} , ${3:MPI_Datatype* etype} , ${4:MPI_Datatype* filetype} , ${5:char* datarep});"]
+},
+
+"MPI_File_iread": {
+	"scope": "c,cpp",
+	"prefix": ["MPI_File_iread"],
+	"description" : "MPI File_iread Snippet",
+	"body" : [ "MPI_File_iread( ${1:MPI_File fh} , ${2:void* buf} , ${3:MPI_Count count} , ${4:MPI_Datatype datatype} , ${5:MPI_Request* request});"]
+},
+
+"MPI_File_iread_all": {
+	"scope": "c,cpp",
+	"prefix": ["MPI_File_iread_all"],
+	"description" : "MPI File_iread_all Snippet",
+	"body" : [ "MPI_File_iread_all( ${1:MPI_File fh} , ${2:void* buf} , ${3:MPI_Count count} , ${4:MPI_Datatype datatype} , ${5:MPI_Request* request});"]
+},
+
+"MPI_File_iread_at": {
+	"scope": "c,cpp",
+	"prefix": ["MPI_File_iread_at"],
+	"description" : "MPI File_iread_at Snippet",
+	"body" : [ "MPI_File_iread_at( ${1:MPI_File fh} , ${2:MPI_Offset offset} , ${3:void* buf} , ${4:MPI_Count count} , ${5:MPI_Datatype datatype} , ${6:MPI_Request* request});"]
+},
+
+"MPI_File_iread_at_all": {
+	"scope": "c,cpp",
+	"prefix": ["MPI_File_iread_at_all"],
+	"description" : "MPI File_iread_at_all Snippet",
+	"body" : [ "MPI_File_iread_at_all( ${1:MPI_File fh} , ${2:MPI_Offset offset} , ${3:void* buf} , ${4:MPI_Count count} , ${5:MPI_Datatype datatype} , ${6:MPI_Request* request});"]
+},
+
+"MPI_File_iread_shared": {
+	"scope": "c,cpp",
+	"prefix": ["MPI_File_iread_shared"],
+	"description" : "MPI File_iread_shared Snippet",
+	"body" : [ "MPI_File_iread_shared( ${1:MPI_File fh} , ${2:void* buf} , ${3:MPI_Count count} , ${4:MPI_Datatype datatype} , ${5:MPI_Request* request});"]
+},
+
+"MPI_File_iwrite": {
+	"scope": "c,cpp",
+	"prefix": ["MPI_File_iwrite"],
+	"description" : "MPI File_iwrite Snippet",
+	"body" : [ "MPI_File_iwrite( ${1:MPI_File fh} , ${2:const void* buf} , ${3:MPI_Count count} , ${4:MPI_Datatype datatype} , ${5:MPI_Request* request});"]
+},
+
+"MPI_File_iwrite_all": {
+	"scope": "c,cpp",
+	"prefix": ["MPI_File_iwrite_all"],
+	"description" : "MPI File_iwrite_all Snippet",
+	"body" : [ "MPI_File_iwrite_all( ${1:MPI_File fh} , ${2:const void* buf} , ${3:MPI_Count count} , ${4:MPI_Datatype datatype} , ${5:MPI_Request* request});"]
+},
+
+"MPI_File_iwrite_at": {
+	"scope": "c,cpp",
+	"prefix": ["MPI_File_iwrite_at"],
+	"description" : "MPI File_iwrite_at Snippet",
+	"body" : [ "MPI_File_iwrite_at( ${1:MPI_File fh} , ${2:MPI_Offset offset} , ${3:const void* buf} , ${4:MPI_Count count} , ${5:MPI_Datatype datatype} , ${6:MPI_Request* request});"]
+},
+
+"MPI_File_iwrite_at_all": {
+	"scope": "c,cpp",
+	"prefix": ["MPI_File_iwrite_at_all"],
+	"description" : "MPI File_iwrite_at_all Snippet",
+	"body" : [ "MPI_File_iwrite_at_all( ${1:MPI_File fh} , ${2:MPI_Offset offset} , ${3:const void* buf} , ${4:MPI_Count count} , ${5:MPI_Datatype datatype} , ${6:MPI_Request* request});"]
+},
+
+"MPI_File_iwrite_shared": {
+	"scope": "c,cpp",
+	"prefix": ["MPI_File_iwrite_shared"],
+	"description" : "MPI File_iwrite_shared Snippet",
+	"body" : [ "MPI_File_iwrite_shared( ${1:MPI_File fh} , ${2:const void* buf} , ${3:MPI_Count count} , ${4:MPI_Datatype datatype} , ${5:MPI_Request* request});"]
+},
+
+"MPI_File_open": {
+	"scope": "c,cpp",
+	"prefix": ["MPI_File_open"],
+	"description" : "MPI File_open Snippet",
+	"body" : [ "MPI_File_open( ${1:MPI_Comm comm} , ${2:const char* filename} , ${3:int amode} , ${4:MPI_Info info} , ${5:MPI_File* fh});"]
+},
+
+"MPI_File_preallocate": {
+	"scope": "c,cpp",
+	"prefix": ["MPI_File_preallocate"],
+	"description" : "MPI File_preallocate Snippet",
+	"body" : [ "MPI_File_preallocate( ${1:MPI_File fh} , ${2:MPI_Offset size});"]
+},
+
+"MPI_File_read": {
+	"scope": "c,cpp",
+	"prefix": ["MPI_File_read"],
+	"description" : "MPI File_read Snippet",
+	"body" : [ "MPI_File_read( ${1:MPI_File fh} , ${2:void* buf} , ${3:MPI_Count count} , ${4:MPI_Datatype datatype} , ${5:MPI_Status* status});"]
+},
+
+"MPI_File_read_all": {
+	"scope": "c,cpp",
+	"prefix": ["MPI_File_read_all"],
+	"description" : "MPI File_read_all Snippet",
+	"body" : [ "MPI_File_read_all( ${1:MPI_File fh} , ${2:void* buf} , ${3:MPI_Count count} , ${4:MPI_Datatype datatype} , ${5:MPI_Status* status});"]
+},
+
+"MPI_File_read_all_begin": {
+	"scope": "c,cpp",
+	"prefix": ["MPI_File_read_all_begin"],
+	"description" : "MPI File_read_all_begin Snippet",
+	"body" : [ "MPI_File_read_all_begin( ${1:MPI_File fh} , ${2:void* buf} , ${3:MPI_Count count} , ${4:MPI_Datatype datatype});"]
+},
+
+"MPI_File_read_all_end": {
+	"scope": "c,cpp",
+	"prefix": ["MPI_File_read_all_end"],
+	"description" : "MPI File_read_all_end Snippet",
+	"body" : [ "MPI_File_read_all_end( ${1:MPI_File fh} , ${2:void* buf} , ${3:MPI_Status* status});"]
+},
+
+"MPI_File_read_at": {
+	"scope": "c,cpp",
+	"prefix": ["MPI_File_read_at"],
+	"description" : "MPI File_read_at Snippet",
+	"body" : [ "MPI_File_read_at( ${1:MPI_File fh} , ${2:MPI_Offset offset} , ${3:void* buf} , ${4:MPI_Count count} , ${5:MPI_Datatype datatype} , ${6:MPI_Status* status});"]
+},
+
+"MPI_File_read_at_all": {
+	"scope": "c,cpp",
+	"prefix": ["MPI_File_read_at_all"],
+	"description" : "MPI File_read_at_all Snippet",
+	"body" : [ "MPI_File_read_at_all( ${1:MPI_File fh} , ${2:MPI_Offset offset} , ${3:void* buf} , ${4:MPI_Count count} , ${5:MPI_Datatype datatype} , ${6:MPI_Status* status});"]
+},
+
+"MPI_File_read_at_all_begin": {
+	"scope": "c,cpp",
+	"prefix": ["MPI_File_read_at_all_begin"],
+	"description" : "MPI File_read_at_all_begin Snippet",
+	"body" : [ "MPI_File_read_at_all_begin( ${1:MPI_File fh} , ${2:MPI_Offset offset} , ${3:void* buf} , ${4:MPI_Count count} , ${5:MPI_Datatype datatype});"]
+},
+
+"MPI_File_read_at_all_end": {
+	"scope": "c,cpp",
+	"prefix": ["MPI_File_read_at_all_end"],
+	"description" : "MPI File_read_at_all_end Snippet",
+	"body" : [ "MPI_File_read_at_all_end( ${1:MPI_File fh} , ${2:void* buf} , ${3:MPI_Status* status});"]
+},
+
+"MPI_File_read_ordered": {
+	"scope": "c,cpp",
+	"prefix": ["MPI_File_read_ordered"],
+	"description" : "MPI File_read_ordered Snippet",
+	"body" : [ "MPI_File_read_ordered( ${1:MPI_File fh} , ${2:void* buf} , ${3:MPI_Count count} , ${4:MPI_Datatype datatype} , ${5:MPI_Status* status});"]
+},
+
+"MPI_File_read_ordered_begin": {
+	"scope": "c,cpp",
+	"prefix": ["MPI_File_read_ordered_begin"],
+	"description" : "MPI File_read_ordered_begin Snippet",
+	"body" : [ "MPI_File_read_ordered_begin( ${1:MPI_File fh} , ${2:void* buf} , ${3:MPI_Count count} , ${4:MPI_Datatype datatype});"]
+},
+
+"MPI_File_read_ordered_end": {
+	"scope": "c,cpp",
+	"prefix": ["MPI_File_read_ordered_end"],
+	"description" : "MPI File_read_ordered_end Snippet",
+	"body" : [ "MPI_File_read_ordered_end( ${1:MPI_File fh} , ${2:void* buf} , ${3:MPI_Status* status});"]
+},
+
+"MPI_File_read_shared": {
+	"scope": "c,cpp",
+	"prefix": ["MPI_File_read_shared"],
+	"description" : "MPI File_read_shared Snippet",
+	"body" : [ "MPI_File_read_shared( ${1:MPI_File fh} , ${2:void* buf} , ${3:MPI_Count count} , ${4:MPI_Datatype datatype} , ${5:MPI_Status* status});"]
+},
+
+"MPI_File_seek": {
+	"scope": "c,cpp",
+	"prefix": ["MPI_File_seek"],
+	"description" : "MPI File_seek Snippet",
+	"body" : [ "MPI_File_seek( ${1:MPI_File fh} , ${2:MPI_Offset offset} , ${3:int whence});"]
+},
+
+"MPI_File_seek_shared": {
+	"scope": "c,cpp",
+	"prefix": ["MPI_File_seek_shared"],
+	"description" : "MPI File_seek_shared Snippet",
+	"body" : [ "MPI_File_seek_shared( ${1:MPI_File fh} , ${2:MPI_Offset offset} , ${3:int whence});"]
+},
+
+"MPI_File_set_atomicity": {
+	"scope": "c,cpp",
+	"prefix": ["MPI_File_set_atomicity"],
+	"description" : "MPI File_set_atomicity Snippet",
+	"body" : [ "MPI_File_set_atomicity( ${1:MPI_File fh} , ${2:int flag});"]
+},
+
+"MPI_File_set_errhandler": {
+	"scope": "c,cpp",
+	"prefix": ["MPI_File_set_errhandler"],
+	"description" : "MPI File_set_errhandler Snippet",
+	"body" : [ "MPI_File_set_errhandler( ${1:MPI_File file} , ${2:MPI_Errhandler errhandler});"]
+},
+
+"MPI_File_set_info": {
+	"scope": "c,cpp",
+	"prefix": ["MPI_File_set_info"],
+	"description" : "MPI File_set_info Snippet",
+	"body" : [ "MPI_File_set_info( ${1:MPI_File fh} , ${2:MPI_Info info});"]
+},
+
+"MPI_File_set_size": {
+	"scope": "c,cpp",
+	"prefix": ["MPI_File_set_size"],
+	"description" : "MPI File_set_size Snippet",
+	"body" : [ "MPI_File_set_size( ${1:MPI_File fh} , ${2:MPI_Offset size});"]
+},
+
+"MPI_File_set_view": {
+	"scope": "c,cpp",
+	"prefix": ["MPI_File_set_view"],
+	"description" : "MPI File_set_view Snippet",
+	"body" : [ "MPI_File_set_view( ${1:MPI_File fh} , ${2:MPI_Offset disp} , ${3:MPI_Datatype etype} , ${4:MPI_Datatype filetype} , ${5:const char* datarep} , ${6:MPI_Info info});"]
+},
+
+"MPI_File_sync": {
+	"scope": "c,cpp",
+	"prefix": ["MPI_File_sync"],
+	"description" : "MPI File_sync Snippet",
+	"body" : [ "MPI_File_sync( ${1:MPI_File fh});"]
+},
+
+"MPI_File_write": {
+	"scope": "c,cpp",
+	"prefix": ["MPI_File_write"],
+	"description" : "MPI File_write Snippet",
+	"body" : [ "MPI_File_write( ${1:MPI_File fh} , ${2:const void* buf} , ${3:MPI_Count count} , ${4:MPI_Datatype datatype} , ${5:MPI_Status* status});"]
+},
+
+"MPI_File_write_all": {
+	"scope": "c,cpp",
+	"prefix": ["MPI_File_write_all"],
+	"description" : "MPI File_write_all Snippet",
+	"body" : [ "MPI_File_write_all( ${1:MPI_File fh} , ${2:const void* buf} , ${3:MPI_Count count} , ${4:MPI_Datatype datatype} , ${5:MPI_Status* status});"]
+},
+
+"MPI_File_write_all_begin": {
+	"scope": "c,cpp",
+	"prefix": ["MPI_File_write_all_begin"],
+	"description" : "MPI File_write_all_begin Snippet",
+	"body" : [ "MPI_File_write_all_begin( ${1:MPI_File fh} , ${2:const void* buf} , ${3:MPI_Count count} , ${4:MPI_Datatype datatype});"]
+},
+
+"MPI_File_write_all_end": {
+	"scope": "c,cpp",
+	"prefix": ["MPI_File_write_all_end"],
+	"description" : "MPI File_write_all_end Snippet",
+	"body" : [ "MPI_File_write_all_end( ${1:MPI_File fh} , ${2:const void* buf} , ${3:MPI_Status* status});"]
+},
+
+"MPI_File_write_at": {
+	"scope": "c,cpp",
+	"prefix": ["MPI_File_write_at"],
+	"description" : "MPI File_write_at Snippet",
+	"body" : [ "MPI_File_write_at( ${1:MPI_File fh} , ${2:MPI_Offset offset} , ${3:const void* buf} , ${4:MPI_Count count} , ${5:MPI_Datatype datatype} , ${6:MPI_Status* status});"]
+},
+
+"MPI_File_write_at_all": {
+	"scope": "c,cpp",
+	"prefix": ["MPI_File_write_at_all"],
+	"description" : "MPI File_write_at_all Snippet",
+	"body" : [ "MPI_File_write_at_all( ${1:MPI_File fh} , ${2:MPI_Offset offset} , ${3:const void* buf} , ${4:MPI_Count count} , ${5:MPI_Datatype datatype} , ${6:MPI_Status* status});"]
+},
+
+"MPI_File_write_at_all_begin": {
+	"scope": "c,cpp",
+	"prefix": ["MPI_File_write_at_all_begin"],
+	"description" : "MPI File_write_at_all_begin Snippet",
+	"body" : [ "MPI_File_write_at_all_begin( ${1:MPI_File fh} , ${2:MPI_Offset offset} , ${3:const void* buf} , ${4:MPI_Count count} , ${5:MPI_Datatype datatype});"]
+},
+
+"MPI_File_write_at_all_end": {
+	"scope": "c,cpp",
+	"prefix": ["MPI_File_write_at_all_end"],
+	"description" : "MPI File_write_at_all_end Snippet",
+	"body" : [ "MPI_File_write_at_all_end( ${1:MPI_File fh} , ${2:const void* buf} , ${3:MPI_Status* status});"]
+},
+
+"MPI_File_write_ordered": {
+	"scope": "c,cpp",
+	"prefix": ["MPI_File_write_ordered"],
+	"description" : "MPI File_write_ordered Snippet",
+	"body" : [ "MPI_File_write_ordered( ${1:MPI_File fh} , ${2:const void* buf} , ${3:MPI_Count count} , ${4:MPI_Datatype datatype} , ${5:MPI_Status* status});"]
+},
+
+"MPI_File_write_ordered_begin": {
+	"scope": "c,cpp",
+	"prefix": ["MPI_File_write_ordered_begin"],
+	"description" : "MPI File_write_ordered_begin Snippet",
+	"body" : [ "MPI_File_write_ordered_begin( ${1:MPI_File fh} , ${2:const void* buf} , ${3:MPI_Count count} , ${4:MPI_Datatype datatype});"]
+},
+
+"MPI_File_write_ordered_end": {
+	"scope": "c,cpp",
+	"prefix": ["MPI_File_write_ordered_end"],
+	"description" : "MPI File_write_ordered_end Snippet",
+	"body" : [ "MPI_File_write_ordered_end( ${1:MPI_File fh} , ${2:const void* buf} , ${3:MPI_Status* status});"]
+},
+
+"MPI_File_write_shared": {
+	"scope": "c,cpp",
+	"prefix": ["MPI_File_write_shared"],
+	"description" : "MPI File_write_shared Snippet",
+	"body" : [ "MPI_File_write_shared( ${1:MPI_File fh} , ${2:const void* buf} , ${3:MPI_Count count} , ${4:MPI_Datatype datatype} , ${5:MPI_Status* status});"]
+},
+
+"MPI_Finalize": {
+	"scope": "c,cpp",
+	"prefix": ["MPI_Finalize"],
+	"description" : "MPI Finalize Snippet",
+	"body" : [ "MPI_Finalize();"]
+},
+
+"MPI_Finalized": {
+	"scope": "c,cpp",
+	"prefix": ["MPI_Finalized"],
+	"description" : "MPI Finalized Snippet",
+	"body" : [ "MPI_Finalized( ${1:int* flag});"]
+},
+
+"MPI_Free_mem": {
+	"scope": "c,cpp",
+	"prefix": ["MPI_Free_mem"],
+	"description" : "MPI Free_mem Snippet",
+	"body" : [ "MPI_Free_mem( ${1:void* base});"]
+},
+
+"MPI_Gather": {
+	"scope": "c,cpp",
+	"prefix": ["MPI_Gather"],
+	"description" : "MPI Gather Snippet",
+	"body" : [ "MPI_Gather( ${1:const void* sendbuf} , ${2:MPI_Count sendcount} , ${3:MPI_Datatype sendtype} , ${4:void* recvbuf} , ${5:MPI_Count recvcount} , ${6:MPI_Datatype recvtype} , ${7:int root} , ${8:MPI_Comm comm});"]
+},
+
+"MPI_Gather_init": {
+	"scope": "c,cpp",
+	"prefix": ["MPI_Gather_init"],
+	"description" : "MPI Gather_init Snippet",
+	"body" : [ "MPI_Gather_init( ${1:const void* sendbuf} , ${2:MPI_Count sendcount} , ${3:MPI_Datatype sendtype} , ${4:void* recvbuf} , ${5:MPI_Count recvcount} , ${6:MPI_Datatype recvtype} , ${7:int root} , ${8:MPI_Comm comm} , ${9:MPI_Info info} , ${10:MPI_Request* request});"]
+},
+
+"MPI_Gatherv": {
+	"scope": "c,cpp",
+	"prefix": ["MPI_Gatherv"],
+	"description" : "MPI Gatherv Snippet",
+	"body" : [ "MPI_Gatherv( ${1:const void* sendbuf} , ${2:MPI_Count sendcount} , ${3:MPI_Datatype sendtype} , ${4:void* recvbuf} , ${5:const MPI_Count recvcounts[]} , ${6:const MPI_Aint displs[]} , ${7:MPI_Datatype recvtype} , ${8:int root} , ${9:MPI_Comm comm});"]
+},
+
+"MPI_Gatherv_init": {
+	"scope": "c,cpp",
+	"prefix": ["MPI_Gatherv_init"],
+	"description" : "MPI Gatherv_init Snippet",
+	"body" : [ "MPI_Gatherv_init( ${1:const void* sendbuf} , ${2:MPI_Count sendcount} , ${3:MPI_Datatype sendtype} , ${4:void* recvbuf} , ${5:const MPI_Count recvcounts[]} , ${6:const MPI_Aint displs[]} , ${7:MPI_Datatype recvtype} , ${8:int root} , ${9:MPI_Comm comm} , ${10:MPI_Info info} , ${11:MPI_Request* request});"]
+},
+
+"MPI_Get": {
+	"scope": "c,cpp",
+	"prefix": ["MPI_Get"],
+	"description" : "MPI Get Snippet",
+	"body" : [ "MPI_Get( ${1:void* origin_addr} , ${2:MPI_Count origin_count} , ${3:MPI_Datatype origin_datatype} , ${4:int target_rank} , ${5:MPI_Aint target_disp} , ${6:MPI_Count target_count} , ${7:MPI_Datatype target_datatype} , ${8:MPI_Win win});"]
+},
+
+"MPI_Get_accumulate": {
+	"scope": "c,cpp",
+	"prefix": ["MPI_Get_accumulate"],
+	"description" : "MPI Get_accumulate Snippet",
+	"body" : [ "MPI_Get_accumulate( ${1:const void* origin_addr} , ${2:MPI_Count origin_count} , ${3:MPI_Datatype origin_datatype} , ${4:void* result_addr} , ${5:MPI_Count result_count} , ${6:MPI_Datatype result_datatype} , ${7:int target_rank} , ${8:MPI_Aint target_disp} , ${9:MPI_Count target_count} , ${10:MPI_Datatype target_datatype} , ${11:MPI_Op op} , ${12:MPI_Win win});"]
+},
+
+"MPI_Get_address": {
+	"scope": "c,cpp",
+	"prefix": ["MPI_Get_address"],
+	"description" : "MPI Get_address Snippet",
+	"body" : [ "MPI_Get_address( ${1:const void* location} , ${2:MPI_Aint* address});"]
+},
+
+"MPI_Get_count": {
+	"scope": "c,cpp",
+	"prefix": ["MPI_Get_count"],
+	"description" : "MPI Get_count Snippet",
+	"body" : [ "MPI_Get_count( ${1:const MPI_Status* status} , ${2:MPI_Datatype datatype} , ${3:MPI_Count* count});"]
+},
+
+"MPI_Get_elements": {
+	"scope": "c,cpp",
+	"prefix": ["MPI_Get_elements"],
+	"description" : "MPI Get_elements Snippet",
+	"body" : [ "MPI_Get_elements( ${1:const MPI_Status* status} , ${2:MPI_Datatype datatype} , ${3:MPI_Count* count});"]
+},
+
+"MPI_Get_elements_x": {
+	"scope": "c,cpp",
+	"prefix": ["MPI_Get_elements_x"],
+	"description" : "MPI Get_elements_x Snippet",
+	"body" : [ "MPI_Get_elements_x( ${1:const MPI_Status* status} , ${2:MPI_Datatype datatype} , ${3:MPI_Count* count});"]
+},
+
+"MPI_Get_library_version": {
+	"scope": "c,cpp",
+	"prefix": ["MPI_Get_library_version"],
+	"description" : "MPI Get_library_version Snippet",
+	"body" : [ "MPI_Get_library_version( ${1:char* version} , ${2:int* resultlen});"]
+},
+
+"MPI_Get_processor_name": {
+	"scope": "c,cpp",
+	"prefix": ["MPI_Get_processor_name"],
+	"description" : "MPI Get_processor_name Snippet",
+	"body" : [ "MPI_Get_processor_name( ${1:char* name} , ${2:int* resultlen});"]
+},
+
+"MPI_Get_version": {
+	"scope": "c,cpp",
+	"prefix": ["MPI_Get_version"],
+	"description" : "MPI Get_version Snippet",
+	"body" : [ "MPI_Get_version( ${1:int* version} , ${2:int* subversion});"]
+},
+
+"MPI_Graph_create": {
+	"scope": "c,cpp",
+	"prefix": ["MPI_Graph_create"],
+	"description" : "MPI Graph_create Snippet",
+	"body" : [ "MPI_Graph_create( ${1:MPI_Comm comm_old} , ${2:int nnodes} , ${3:const int index[]} , ${4:const int edges[]} , ${5:int reorder} , ${6:MPI_Comm* comm_graph});"]
+},
+
+"MPI_Graph_get": {
+	"scope": "c,cpp",
+	"prefix": ["MPI_Graph_get"],
+	"description" : "MPI Graph_get Snippet",
+	"body" : [ "MPI_Graph_get( ${1:MPI_Comm comm} , ${2:int maxindex} , ${3:int maxedges} , ${4:int index[]} , ${5:int edges[]});"]
+},
+
+"MPI_Graph_map": {
+	"scope": "c,cpp",
+	"prefix": ["MPI_Graph_map"],
+	"description" : "MPI Graph_map Snippet",
+	"body" : [ "MPI_Graph_map( ${1:MPI_Comm comm} , ${2:int nnodes} , ${3:const int index[]} , ${4:const int edges[]} , ${5:int* newrank});"]
+},
+
+"MPI_Graph_neighbors": {
+	"scope": "c,cpp",
+	"prefix": ["MPI_Graph_neighbors"],
+	"description" : "MPI Graph_neighbors Snippet",
+	"body" : [ "MPI_Graph_neighbors( ${1:MPI_Comm comm} , ${2:int rank} , ${3:int maxneighbors} , ${4:int neighbors[]});"]
+},
+
+"MPI_Graph_neighbors_count": {
+	"scope": "c,cpp",
+	"prefix": ["MPI_Graph_neighbors_count"],
+	"description" : "MPI Graph_neighbors_count Snippet",
+	"body" : [ "MPI_Graph_neighbors_count( ${1:MPI_Comm comm} , ${2:int rank} , ${3:int* nneighbors});"]
+},
+
+"MPI_Graphdims_get": {
+	"scope": "c,cpp",
+	"prefix": ["MPI_Graphdims_get"],
+	"description" : "MPI Graphdims_get Snippet",
+	"body" : [ "MPI_Graphdims_get( ${1:MPI_Comm comm} , ${2:int* nnodes} , ${3:int* nedges});"]
+},
+
+"MPI_Grequest_complete": {
+	"scope": "c,cpp",
+	"prefix": ["MPI_Grequest_complete"],
+	"description" : "MPI Grequest_complete Snippet",
+	"body" : [ "MPI_Grequest_complete( ${1:MPI_Request request});"]
+},
+
+"MPI_Grequest_start": {
+	"scope": "c,cpp",
+	"prefix": ["MPI_Grequest_start"],
+	"description" : "MPI Grequest_start Snippet",
+	"body" : [ "MPI_Grequest_start( ${1:MPI_Grequest_query_function* query_fn} , ${2:MPI_Grequest_free_function* free_fn} , ${3:MPI_Grequest_cancel_function* cancel_fn} , ${4:void* extra_state} , ${5:MPI_Request* request});"]
+},
+
+"MPI_Group_compare": {
+	"scope": "c,cpp",
+	"prefix": ["MPI_Group_compare"],
+	"description" : "MPI Group_compare Snippet",
+	"body" : [ "MPI_Group_compare( ${1:MPI_Group group1} , ${2:MPI_Group group2} , ${3:int* result});"]
+},
+
+"MPI_Group_difference": {
+	"scope": "c,cpp",
+	"prefix": ["MPI_Group_difference"],
+	"description" : "MPI Group_difference Snippet",
+	"body" : [ "MPI_Group_difference( ${1:MPI_Group group1} , ${2:MPI_Group group2} , ${3:MPI_Group* newgroup});"]
+},
+
+"MPI_Group_excl": {
+	"scope": "c,cpp",
+	"prefix": ["MPI_Group_excl"],
+	"description" : "MPI Group_excl Snippet",
+	"body" : [ "MPI_Group_excl( ${1:MPI_Group group} , ${2:int n} , ${3:const int ranks[]} , ${4:MPI_Group* newgroup});"]
+},
+
+"MPI_Group_free": {
+	"scope": "c,cpp",
+	"prefix": ["MPI_Group_free"],
+	"description" : "MPI Group_free Snippet",
+	"body" : [ "MPI_Group_free( ${1:MPI_Group* group});"]
+},
+
+"MPI_Group_from_session_pset": {
+	"scope": "c,cpp",
+	"prefix": ["MPI_Group_from_session_pset"],
+	"description" : "MPI Group_from_session_pset Snippet",
+	"body" : [ "MPI_Group_from_session_pset( ${1:MPI_Session session} , ${2:const char* pset_name} , ${3:MPI_Group* newgroup});"]
+},
+
+"MPI_Group_incl": {
+	"scope": "c,cpp",
+	"prefix": ["MPI_Group_incl"],
+	"description" : "MPI Group_incl Snippet",
+	"body" : [ "MPI_Group_incl( ${1:MPI_Group group} , ${2:int n} , ${3:const int ranks[]} , ${4:MPI_Group* newgroup});"]
+},
+
+"MPI_Group_intersection": {
+	"scope": "c,cpp",
+	"prefix": ["MPI_Group_intersection"],
+	"description" : "MPI Group_intersection Snippet",
+	"body" : [ "MPI_Group_intersection( ${1:MPI_Group group1} , ${2:MPI_Group group2} , ${3:MPI_Group* newgroup});"]
+},
+
+"MPI_Group_range_excl": {
+	"scope": "c,cpp",
+	"prefix": ["MPI_Group_range_excl"],
+	"description" : "MPI Group_range_excl Snippet",
+	"body" : [ "MPI_Group_range_excl( ${1:MPI_Group group} , ${2:int n} , ${3:int ranges[][3]} , ${4:MPI_Group* newgroup});"]
+},
+
+"MPI_Group_range_incl": {
+	"scope": "c,cpp",
+	"prefix": ["MPI_Group_range_incl"],
+	"description" : "MPI Group_range_incl Snippet",
+	"body" : [ "MPI_Group_range_incl( ${1:MPI_Group group} , ${2:int n} , ${3:int ranges[][3]} , ${4:MPI_Group* newgroup});"]
+},
+
+"MPI_Group_rank": {
+	"scope": "c,cpp",
+	"prefix": ["MPI_Group_rank"],
+	"description" : "MPI Group_rank Snippet",
+	"body" : [ "MPI_Group_rank( ${1:MPI_Group group} , ${2:int* rank});"]
+},
+
+"MPI_Group_size": {
+	"scope": "c,cpp",
+	"prefix": ["MPI_Group_size"],
+	"description" : "MPI Group_size Snippet",
+	"body" : [ "MPI_Group_size( ${1:MPI_Group group} , ${2:int* size});"]
+},
+
+"MPI_Group_translate_ranks": {
+	"scope": "c,cpp",
+	"prefix": ["MPI_Group_translate_ranks"],
+	"description" : "MPI Group_translate_ranks Snippet",
+	"body" : [ "MPI_Group_translate_ranks( ${1:MPI_Group group1} , ${2:int n} , ${3:const int ranks1[]} , ${4:MPI_Group group2} , ${5:int ranks2[]});"]
+},
+
+"MPI_Group_union": {
+	"scope": "c,cpp",
+	"prefix": ["MPI_Group_union"],
+	"description" : "MPI Group_union Snippet",
+	"body" : [ "MPI_Group_union( ${1:MPI_Group group1} , ${2:MPI_Group group2} , ${3:MPI_Group* newgroup});"]
+},
+
+"MPI_Iallgather": {
+	"scope": "c,cpp",
+	"prefix": ["MPI_Iallgather"],
+	"description" : "MPI Iallgather Snippet",
+	"body" : [ "MPI_Iallgather( ${1:const void* sendbuf} , ${2:MPI_Count sendcount} , ${3:MPI_Datatype sendtype} , ${4:void* recvbuf} , ${5:MPI_Count recvcount} , ${6:MPI_Datatype recvtype} , ${7:MPI_Comm comm} , ${8:MPI_Request* request});"]
+},
+
+"MPI_Iallgatherv": {
+	"scope": "c,cpp",
+	"prefix": ["MPI_Iallgatherv"],
+	"description" : "MPI Iallgatherv Snippet",
+	"body" : [ "MPI_Iallgatherv( ${1:const void* sendbuf} , ${2:MPI_Count sendcount} , ${3:MPI_Datatype sendtype} , ${4:void* recvbuf} , ${5:const MPI_Count recvcounts[]} , ${6:const MPI_Aint displs[]} , ${7:MPI_Datatype recvtype} , ${8:MPI_Comm comm} , ${9:MPI_Request* request});"]
+},
+
+"MPI_Iallreduce": {
+	"scope": "c,cpp",
+	"prefix": ["MPI_Iallreduce"],
+	"description" : "MPI Iallreduce Snippet",
+	"body" : [ "MPI_Iallreduce( ${1:const void* sendbuf} , ${2:void* recvbuf} , ${3:MPI_Count count} , ${4:MPI_Datatype datatype} , ${5:MPI_Op op} , ${6:MPI_Comm comm} , ${7:MPI_Request* request});"]
+},
+
+"MPI_Ialltoall": {
+	"scope": "c,cpp",
+	"prefix": ["MPI_Ialltoall"],
+	"description" : "MPI Ialltoall Snippet",
+	"body" : [ "MPI_Ialltoall( ${1:const void* sendbuf} , ${2:MPI_Count sendcount} , ${3:MPI_Datatype sendtype} , ${4:void* recvbuf} , ${5:MPI_Count recvcount} , ${6:MPI_Datatype recvtype} , ${7:MPI_Comm comm} , ${8:MPI_Request* request});"]
+},
+
+"MPI_Ialltoallv": {
+	"scope": "c,cpp",
+	"prefix": ["MPI_Ialltoallv"],
+	"description" : "MPI Ialltoallv Snippet",
+	"body" : [ "MPI_Ialltoallv( ${1:const void* sendbuf} , ${2:const MPI_Count sendcounts[]} , ${3:const MPI_Aint sdispls[]} , ${4:MPI_Datatype sendtype} , ${5:void* recvbuf} , ${6:const MPI_Count recvcounts[]} , ${7:const MPI_Aint rdispls[]} , ${8:MPI_Datatype recvtype} , ${9:MPI_Comm comm} , ${10:MPI_Request* request});"]
+},
+
+"MPI_Ialltoallw": {
+	"scope": "c,cpp",
+	"prefix": ["MPI_Ialltoallw"],
+	"description" : "MPI Ialltoallw Snippet",
+	"body" : [ "MPI_Ialltoallw( ${1:const void* sendbuf} , ${2:const MPI_Count sendcounts[]} , ${3:const MPI_Aint sdispls[]} , ${4:const MPI_Datatype sendtypes[]} , ${5:void* recvbuf} , ${6:const MPI_Count recvcounts[]} , ${7:const MPI_Aint rdispls[]} , ${8:const MPI_Datatype recvtypes[]} , ${9:MPI_Comm comm} , ${10:MPI_Request* request});"]
+},
+
+"MPI_Ibarrier": {
+	"scope": "c,cpp",
+	"prefix": ["MPI_Ibarrier"],
+	"description" : "MPI Ibarrier Snippet",
+	"body" : [ "MPI_Ibarrier( ${1:MPI_Comm comm} , ${2:MPI_Request* request});"]
+},
+
+"MPI_Ibcast": {
+	"scope": "c,cpp",
+	"prefix": ["MPI_Ibcast"],
+	"description" : "MPI Ibcast Snippet",
+	"body" : [ "MPI_Ibcast( ${1:void* buffer} , ${2:MPI_Count count} , ${3:MPI_Datatype datatype} , ${4:int root} , ${5:MPI_Comm comm} , ${6:MPI_Request* request});"]
+},
+
+"MPI_Ibsend": {
+	"scope": "c,cpp",
+	"prefix": ["MPI_Ibsend"],
+	"description" : "MPI Ibsend Snippet",
+	"body" : [ "MPI_Ibsend( ${1:const void* buf} , ${2:MPI_Count count} , ${3:MPI_Datatype datatype} , ${4:int dest} , ${5:int tag} , ${6:MPI_Comm comm} , ${7:MPI_Request* request});"]
+},
+
+"MPI_Iexscan": {
+	"scope": "c,cpp",
+	"prefix": ["MPI_Iexscan"],
+	"description" : "MPI Iexscan Snippet",
+	"body" : [ "MPI_Iexscan( ${1:const void* sendbuf} , ${2:void* recvbuf} , ${3:MPI_Count count} , ${4:MPI_Datatype datatype} , ${5:MPI_Op op} , ${6:MPI_Comm comm} , ${7:MPI_Request* request});"]
+},
+
+"MPI_Igather": {
+	"scope": "c,cpp",
+	"prefix": ["MPI_Igather"],
+	"description" : "MPI Igather Snippet",
+	"body" : [ "MPI_Igather( ${1:const void* sendbuf} , ${2:MPI_Count sendcount} , ${3:MPI_Datatype sendtype} , ${4:void* recvbuf} , ${5:MPI_Count recvcount} , ${6:MPI_Datatype recvtype} , ${7:int root} , ${8:MPI_Comm comm} , ${9:MPI_Request* request});"]
+},
+
+"MPI_Igatherv": {
+	"scope": "c,cpp",
+	"prefix": ["MPI_Igatherv"],
+	"description" : "MPI Igatherv Snippet",
+	"body" : [ "MPI_Igatherv( ${1:const void* sendbuf} , ${2:MPI_Count sendcount} , ${3:MPI_Datatype sendtype} , ${4:void* recvbuf} , ${5:const MPI_Count recvcounts[]} , ${6:const MPI_Aint displs[]} , ${7:MPI_Datatype recvtype} , ${8:int root} , ${9:MPI_Comm comm} , ${10:MPI_Request* request});"]
+},
+
+"MPI_Improbe": {
+	"scope": "c,cpp",
+	"prefix": ["MPI_Improbe"],
+	"description" : "MPI Improbe Snippet",
+	"body" : [ "MPI_Improbe( ${1:int source} , ${2:int tag} , ${3:MPI_Comm comm} , ${4:int* flag} , ${5:MPI_Message* message} , ${6:MPI_Status* status});"]
+},
+
+"MPI_Imrecv": {
+	"scope": "c,cpp",
+	"prefix": ["MPI_Imrecv"],
+	"description" : "MPI Imrecv Snippet",
+	"body" : [ "MPI_Imrecv( ${1:void* buf} , ${2:MPI_Count count} , ${3:MPI_Datatype datatype} , ${4:MPI_Message* message} , ${5:MPI_Request* request});"]
+},
+
+"MPI_Ineighbor_allgather": {
+	"scope": "c,cpp",
+	"prefix": ["MPI_Ineighbor_allgather"],
+	"description" : "MPI Ineighbor_allgather Snippet",
+	"body" : [ "MPI_Ineighbor_allgather( ${1:const void* sendbuf} , ${2:MPI_Count sendcount} , ${3:MPI_Datatype sendtype} , ${4:void* recvbuf} , ${5:MPI_Count recvcount} , ${6:MPI_Datatype recvtype} , ${7:MPI_Comm comm} , ${8:MPI_Request* request});"]
+},
+
+"MPI_Ineighbor_allgatherv": {
+	"scope": "c,cpp",
+	"prefix": ["MPI_Ineighbor_allgatherv"],
+	"description" : "MPI Ineighbor_allgatherv Snippet",
+	"body" : [ "MPI_Ineighbor_allgatherv( ${1:const void* sendbuf} , ${2:MPI_Count sendcount} , ${3:MPI_Datatype sendtype} , ${4:void* recvbuf} , ${5:const MPI_Count recvcounts[]} , ${6:const MPI_Aint displs[]} , ${7:MPI_Datatype recvtype} , ${8:MPI_Comm comm} , ${9:MPI_Request* request});"]
+},
+
+"MPI_Ineighbor_alltoall": {
+	"scope": "c,cpp",
+	"prefix": ["MPI_Ineighbor_alltoall"],
+	"description" : "MPI Ineighbor_alltoall Snippet",
+	"body" : [ "MPI_Ineighbor_alltoall( ${1:const void* sendbuf} , ${2:MPI_Count sendcount} , ${3:MPI_Datatype sendtype} , ${4:void* recvbuf} , ${5:MPI_Count recvcount} , ${6:MPI_Datatype recvtype} , ${7:MPI_Comm comm} , ${8:MPI_Request* request});"]
+},
+
+"MPI_Ineighbor_alltoallv": {
+	"scope": "c,cpp",
+	"prefix": ["MPI_Ineighbor_alltoallv"],
+	"description" : "MPI Ineighbor_alltoallv Snippet",
+	"body" : [ "MPI_Ineighbor_alltoallv( ${1:const void* sendbuf} , ${2:const MPI_Count sendcounts[]} , ${3:const MPI_Aint sdispls[]} , ${4:MPI_Datatype sendtype} , ${5:void* recvbuf} , ${6:const MPI_Count recvcounts[]} , ${7:const MPI_Aint rdispls[]} , ${8:MPI_Datatype recvtype} , ${9:MPI_Comm comm} , ${10:MPI_Request* request});"]
+},
+
+"MPI_Ineighbor_alltoallw": {
+	"scope": "c,cpp",
+	"prefix": ["MPI_Ineighbor_alltoallw"],
+	"description" : "MPI Ineighbor_alltoallw Snippet",
+	"body" : [ "MPI_Ineighbor_alltoallw( ${1:const void* sendbuf} , ${2:const MPI_Count sendcounts[]} , ${3:const MPI_Aint sdispls[]} , ${4:const MPI_Datatype sendtypes[]} , ${5:void* recvbuf} , ${6:const MPI_Count recvcounts[]} , ${7:const MPI_Aint rdispls[]} , ${8:const MPI_Datatype recvtypes[]} , ${9:MPI_Comm comm} , ${10:MPI_Request* request});"]
+},
+
+"MPI_Info_create": {
+	"scope": "c,cpp",
+	"prefix": ["MPI_Info_create"],
+	"description" : "MPI Info_create Snippet",
+	"body" : [ "MPI_Info_create( ${1:MPI_Info* info});"]
+},
+
+"MPI_Info_create_env": {
+	"scope": "c,cpp",
+	"prefix": ["MPI_Info_create_env"],
+	"description" : "MPI Info_create_env Snippet",
+	"body" : [ "MPI_Info_create_env( ${1:int argc} , ${2:char argv[]} , ${3:MPI_Info* info});"]
+},
+
+"MPI_Info_delete": {
+	"scope": "c,cpp",
+	"prefix": ["MPI_Info_delete"],
+	"description" : "MPI Info_delete Snippet",
+	"body" : [ "MPI_Info_delete( ${1:MPI_Info info} , ${2:const char* key});"]
+},
+
+"MPI_Info_dup": {
+	"scope": "c,cpp",
+	"prefix": ["MPI_Info_dup"],
+	"description" : "MPI Info_dup Snippet",
+	"body" : [ "MPI_Info_dup( ${1:MPI_Info info} , ${2:MPI_Info* newinfo});"]
+},
+
+"MPI_Info_free": {
+	"scope": "c,cpp",
+	"prefix": ["MPI_Info_free"],
+	"description" : "MPI Info_free Snippet",
+	"body" : [ "MPI_Info_free( ${1:MPI_Info* info});"]
+},
+
+"MPI_Info_get": {
+	"scope": "c,cpp",
+	"prefix": ["MPI_Info_get"],
+	"description" : "MPI Info_get Snippet",
+	"body" : [ "MPI_Info_get( ${1:MPI_Info info} , ${2:const char* key} , ${3:int valuelen} , ${4:char* value} , ${5:int* flag});"]
+},
+
+"MPI_Info_get_nkeys": {
+	"scope": "c,cpp",
+	"prefix": ["MPI_Info_get_nkeys"],
+	"description" : "MPI Info_get_nkeys Snippet",
+	"body" : [ "MPI_Info_get_nkeys( ${1:MPI_Info info} , ${2:int* nkeys});"]
+},
+
+"MPI_Info_get_nthkey": {
+	"scope": "c,cpp",
+	"prefix": ["MPI_Info_get_nthkey"],
+	"description" : "MPI Info_get_nthkey Snippet",
+	"body" : [ "MPI_Info_get_nthkey( ${1:MPI_Info info} , ${2:int n} , ${3:char* key});"]
+},
+
+"MPI_Info_get_string": {
+	"scope": "c,cpp",
+	"prefix": ["MPI_Info_get_string"],
+	"description" : "MPI Info_get_string Snippet",
+	"body" : [ "MPI_Info_get_string( ${1:MPI_Info info} , ${2:const char* key} , ${3:int* buflen} , ${4:char* value} , ${5:int* flag});"]
+},
+
+"MPI_Info_get_valuelen": {
+	"scope": "c,cpp",
+	"prefix": ["MPI_Info_get_valuelen"],
+	"description" : "MPI Info_get_valuelen Snippet",
+	"body" : [ "MPI_Info_get_valuelen( ${1:MPI_Info info} , ${2:const char* key} , ${3:int* valuelen} , ${4:int* flag});"]
+},
+
+"MPI_Info_set": {
+	"scope": "c,cpp",
+	"prefix": ["MPI_Info_set"],
+	"description" : "MPI Info_set Snippet",
+	"body" : [ "MPI_Info_set( ${1:MPI_Info info} , ${2:const char* key} , ${3:const char* value});"]
+},
+
+"MPI_Init": {
+	"scope": "c,cpp",
+	"prefix": ["MPI_Init"],
+	"description" : "MPI Init Snippet",
+	"body" : [ "MPI_Init( ${1:int* argc} , ${2:char*** argv});"]
+},
+
+"MPI_Init_thread": {
+	"scope": "c,cpp",
+	"prefix": ["MPI_Init_thread"],
+	"description" : "MPI Init_thread Snippet",
+	"body" : [ "MPI_Init_thread( ${1:int* argc} , ${2:char*** argv} , ${3:int required} , ${4:int* provided});"]
+},
+
+"MPI_Initialized": {
+	"scope": "c,cpp",
+	"prefix": ["MPI_Initialized"],
+	"description" : "MPI Initialized Snippet",
+	"body" : [ "MPI_Initialized( ${1:int* flag});"]
+},
+
+"MPI_Intercomm_create": {
+	"scope": "c,cpp",
+	"prefix": ["MPI_Intercomm_create"],
+	"description" : "MPI Intercomm_create Snippet",
+	"body" : [ "MPI_Intercomm_create( ${1:MPI_Comm local_comm} , ${2:int local_leader} , ${3:MPI_Comm peer_comm} , ${4:int remote_leader} , ${5:int tag} , ${6:MPI_Comm* newintercomm});"]
+},
+
+"MPI_Intercomm_create_from_groups": {
+	"scope": "c,cpp",
+	"prefix": ["MPI_Intercomm_create_from_groups"],
+	"description" : "MPI Intercomm_create_from_groups Snippet",
+	"body" : [ "MPI_Intercomm_create_from_groups( ${1:MPI_Group local_group} , ${2:int local_leader} , ${3:MPI_Group remote_group} , ${4:int remote_leader} , ${5:const char* stringtag} , ${6:MPI_Info info} , ${7:MPI_Errhandler errhandler} , ${8:MPI_Comm* newintercomm});"]
+},
+
+"MPI_Intercomm_merge": {
+	"scope": "c,cpp",
+	"prefix": ["MPI_Intercomm_merge"],
+	"description" : "MPI Intercomm_merge Snippet",
+	"body" : [ "MPI_Intercomm_merge( ${1:MPI_Comm intercomm} , ${2:int high} , ${3:MPI_Comm* newintracomm});"]
+},
+
+"MPI_Iprobe": {
+	"scope": "c,cpp",
+	"prefix": ["MPI_Iprobe"],
+	"description" : "MPI Iprobe Snippet",
+	"body" : [ "MPI_Iprobe( ${1:int source} , ${2:int tag} , ${3:MPI_Comm comm} , ${4:int* flag} , ${5:MPI_Status* status});"]
+},
+
+"MPI_Irecv": {
+	"scope": "c,cpp",
+	"prefix": ["MPI_Irecv"],
+	"description" : "MPI Irecv Snippet",
+	"body" : [ "MPI_Irecv( ${1:void* buf} , ${2:MPI_Count count} , ${3:MPI_Datatype datatype} , ${4:int source} , ${5:int tag} , ${6:MPI_Comm comm} , ${7:MPI_Request* request});"]
+},
+
+"MPI_Ireduce": {
+	"scope": "c,cpp",
+	"prefix": ["MPI_Ireduce"],
+	"description" : "MPI Ireduce Snippet",
+	"body" : [ "MPI_Ireduce( ${1:const void* sendbuf} , ${2:void* recvbuf} , ${3:MPI_Count count} , ${4:MPI_Datatype datatype} , ${5:MPI_Op op} , ${6:int root} , ${7:MPI_Comm comm} , ${8:MPI_Request* request});"]
+},
+
+"MPI_Ireduce_scatter": {
+	"scope": "c,cpp",
+	"prefix": ["MPI_Ireduce_scatter"],
+	"description" : "MPI Ireduce_scatter Snippet",
+	"body" : [ "MPI_Ireduce_scatter( ${1:const void* sendbuf} , ${2:void* recvbuf} , ${3:const MPI_Count recvcounts[]} , ${4:MPI_Datatype datatype} , ${5:MPI_Op op} , ${6:MPI_Comm comm} , ${7:MPI_Request* request});"]
+},
+
+"MPI_Ireduce_scatter_block": {
+	"scope": "c,cpp",
+	"prefix": ["MPI_Ireduce_scatter_block"],
+	"description" : "MPI Ireduce_scatter_block Snippet",
+	"body" : [ "MPI_Ireduce_scatter_block( ${1:const void* sendbuf} , ${2:void* recvbuf} , ${3:MPI_Count recvcount} , ${4:MPI_Datatype datatype} , ${5:MPI_Op op} , ${6:MPI_Comm comm} , ${7:MPI_Request* request});"]
+},
+
+"MPI_Irsend": {
+	"scope": "c,cpp",
+	"prefix": ["MPI_Irsend"],
+	"description" : "MPI Irsend Snippet",
+	"body" : [ "MPI_Irsend( ${1:const void* buf} , ${2:MPI_Count count} , ${3:MPI_Datatype datatype} , ${4:int dest} , ${5:int tag} , ${6:MPI_Comm comm} , ${7:MPI_Request* request});"]
+},
+
+"MPI_Is_thread_main": {
+	"scope": "c,cpp",
+	"prefix": ["MPI_Is_thread_main"],
+	"description" : "MPI Is_thread_main Snippet",
+	"body" : [ "MPI_Is_thread_main( ${1:int* flag});"]
+},
+
+"MPI_Iscan": {
+	"scope": "c,cpp",
+	"prefix": ["MPI_Iscan"],
+	"description" : "MPI Iscan Snippet",
+	"body" : [ "MPI_Iscan( ${1:const void* sendbuf} , ${2:void* recvbuf} , ${3:MPI_Count count} , ${4:MPI_Datatype datatype} , ${5:MPI_Op op} , ${6:MPI_Comm comm} , ${7:MPI_Request* request});"]
+},
+
+"MPI_Iscatter": {
+	"scope": "c,cpp",
+	"prefix": ["MPI_Iscatter"],
+	"description" : "MPI Iscatter Snippet",
+	"body" : [ "MPI_Iscatter( ${1:const void* sendbuf} , ${2:MPI_Count sendcount} , ${3:MPI_Datatype sendtype} , ${4:void* recvbuf} , ${5:MPI_Count recvcount} , ${6:MPI_Datatype recvtype} , ${7:int root} , ${8:MPI_Comm comm} , ${9:MPI_Request* request});"]
+},
+
+"MPI_Iscatterv": {
+	"scope": "c,cpp",
+	"prefix": ["MPI_Iscatterv"],
+	"description" : "MPI Iscatterv Snippet",
+	"body" : [ "MPI_Iscatterv( ${1:const void* sendbuf} , ${2:const MPI_Count sendcounts[]} , ${3:const MPI_Aint displs[]} , ${4:MPI_Datatype sendtype} , ${5:void* recvbuf} , ${6:MPI_Count recvcount} , ${7:MPI_Datatype recvtype} , ${8:int root} , ${9:MPI_Comm comm} , ${10:MPI_Request* request});"]
+},
+
+"MPI_Isend": {
+	"scope": "c,cpp",
+	"prefix": ["MPI_Isend"],
+	"description" : "MPI Isend Snippet",
+	"body" : [ "MPI_Isend( ${1:const void* buf} , ${2:MPI_Count count} , ${3:MPI_Datatype datatype} , ${4:int dest} , ${5:int tag} , ${6:MPI_Comm comm} , ${7:MPI_Request* request});"]
+},
+
+"MPI_Isendrecv": {
+	"scope": "c,cpp",
+	"prefix": ["MPI_Isendrecv"],
+	"description" : "MPI Isendrecv Snippet",
+	"body" : [ "MPI_Isendrecv( ${1:const void* sendbuf} , ${2:MPI_Count sendcount} , ${3:MPI_Datatype sendtype} , ${4:int dest} , ${5:int sendtag} , ${6:void* recvbuf} , ${7:MPI_Count recvcount} , ${8:MPI_Datatype recvtype} , ${9:int source} , ${10:int recvtag} , ${11:MPI_Comm comm} , ${12:MPI_Request* request});"]
+},
+
+"MPI_Isendrecv_replace": {
+	"scope": "c,cpp",
+	"prefix": ["MPI_Isendrecv_replace"],
+	"description" : "MPI Isendrecv_replace Snippet",
+	"body" : [ "MPI_Isendrecv_replace( ${1:void* buf} , ${2:MPI_Count count} , ${3:MPI_Datatype datatype} , ${4:int dest} , ${5:int sendtag} , ${6:int source} , ${7:int recvtag} , ${8:MPI_Comm comm} , ${9:MPI_Request* request});"]
+},
+
+"MPI_Issend": {
+	"scope": "c,cpp",
+	"prefix": ["MPI_Issend"],
+	"description" : "MPI Issend Snippet",
+	"body" : [ "MPI_Issend( ${1:const void* buf} , ${2:MPI_Count count} , ${3:MPI_Datatype datatype} , ${4:int dest} , ${5:int tag} , ${6:MPI_Comm comm} , ${7:MPI_Request* request});"]
+},
+
+"MPI_Keyval_create": {
+	"scope": "c,cpp",
+	"prefix": ["MPI_Keyval_create"],
+	"description" : "MPI Keyval_create Snippet",
+	"body" : [ "MPI_Keyval_create( ${1:MPI_Copy_function* copy_fn} , ${2:MPI_Delete_function* delete_fn} , ${3:int* keyval} , ${4:void* extra_state});"]
+},
+
+"MPI_Keyval_free": {
+	"scope": "c,cpp",
+	"prefix": ["MPI_Keyval_free"],
+	"description" : "MPI Keyval_free Snippet",
+	"body" : [ "MPI_Keyval_free( ${1:int* keyval});"]
+},
+
+"MPI_Lookup_name": {
+	"scope": "c,cpp",
+	"prefix": ["MPI_Lookup_name"],
+	"description" : "MPI Lookup_name Snippet",
+	"body" : [ "MPI_Lookup_name( ${1:const char* service_name} , ${2:MPI_Info info} , ${3:char* port_name});"]
+},
+
+"MPI_Mprobe": {
+	"scope": "c,cpp",
+	"prefix": ["MPI_Mprobe"],
+	"description" : "MPI Mprobe Snippet",
+	"body" : [ "MPI_Mprobe( ${1:int source} , ${2:int tag} , ${3:MPI_Comm comm} , ${4:MPI_Message* message} , ${5:MPI_Status* status});"]
+},
+
+"MPI_Mrecv": {
+	"scope": "c,cpp",
+	"prefix": ["MPI_Mrecv"],
+	"description" : "MPI Mrecv Snippet",
+	"body" : [ "MPI_Mrecv( ${1:void* buf} , ${2:MPI_Count count} , ${3:MPI_Datatype datatype} , ${4:MPI_Message* message} , ${5:MPI_Status* status});"]
+},
+
+"MPI_Neighbor_allgather": {
+	"scope": "c,cpp",
+	"prefix": ["MPI_Neighbor_allgather"],
+	"description" : "MPI Neighbor_allgather Snippet",
+	"body" : [ "MPI_Neighbor_allgather( ${1:const void* sendbuf} , ${2:MPI_Count sendcount} , ${3:MPI_Datatype sendtype} , ${4:void* recvbuf} , ${5:MPI_Count recvcount} , ${6:MPI_Datatype recvtype} , ${7:MPI_Comm comm});"]
+},
+
+"MPI_Neighbor_allgather_init": {
+	"scope": "c,cpp",
+	"prefix": ["MPI_Neighbor_allgather_init"],
+	"description" : "MPI Neighbor_allgather_init Snippet",
+	"body" : [ "MPI_Neighbor_allgather_init( ${1:const void* sendbuf} , ${2:MPI_Count sendcount} , ${3:MPI_Datatype sendtype} , ${4:void* recvbuf} , ${5:MPI_Count recvcount} , ${6:MPI_Datatype recvtype} , ${7:MPI_Comm comm} , ${8:MPI_Info info} , ${9:MPI_Request* request});"]
+},
+
+"MPI_Neighbor_allgatherv": {
+	"scope": "c,cpp",
+	"prefix": ["MPI_Neighbor_allgatherv"],
+	"description" : "MPI Neighbor_allgatherv Snippet",
+	"body" : [ "MPI_Neighbor_allgatherv( ${1:const void* sendbuf} , ${2:MPI_Count sendcount} , ${3:MPI_Datatype sendtype} , ${4:void* recvbuf} , ${5:const MPI_Count recvcounts[]} , ${6:const MPI_Aint displs[]} , ${7:MPI_Datatype recvtype} , ${8:MPI_Comm comm});"]
+},
+
+"MPI_Neighbor_allgatherv_init": {
+	"scope": "c,cpp",
+	"prefix": ["MPI_Neighbor_allgatherv_init"],
+	"description" : "MPI Neighbor_allgatherv_init Snippet",
+	"body" : [ "MPI_Neighbor_allgatherv_init( ${1:const void* sendbuf} , ${2:MPI_Count sendcount} , ${3:MPI_Datatype sendtype} , ${4:void* recvbuf} , ${5:const MPI_Count recvcounts[]} , ${6:const MPI_Aint displs[]} , ${7:MPI_Datatype recvtype} , ${8:MPI_Comm comm} , ${9:MPI_Info info} , ${10:MPI_Request* request});"]
+},
+
+"MPI_Neighbor_alltoall": {
+	"scope": "c,cpp",
+	"prefix": ["MPI_Neighbor_alltoall"],
+	"description" : "MPI Neighbor_alltoall Snippet",
+	"body" : [ "MPI_Neighbor_alltoall( ${1:const void* sendbuf} , ${2:MPI_Count sendcount} , ${3:MPI_Datatype sendtype} , ${4:void* recvbuf} , ${5:MPI_Count recvcount} , ${6:MPI_Datatype recvtype} , ${7:MPI_Comm comm});"]
+},
+
+"MPI_Neighbor_alltoall_init": {
+	"scope": "c,cpp",
+	"prefix": ["MPI_Neighbor_alltoall_init"],
+	"description" : "MPI Neighbor_alltoall_init Snippet",
+	"body" : [ "MPI_Neighbor_alltoall_init( ${1:const void* sendbuf} , ${2:MPI_Count sendcount} , ${3:MPI_Datatype sendtype} , ${4:void* recvbuf} , ${5:MPI_Count recvcount} , ${6:MPI_Datatype recvtype} , ${7:MPI_Comm comm} , ${8:MPI_Info info} , ${9:MPI_Request* request});"]
+},
+
+"MPI_Neighbor_alltoallv": {
+	"scope": "c,cpp",
+	"prefix": ["MPI_Neighbor_alltoallv"],
+	"description" : "MPI Neighbor_alltoallv Snippet",
+	"body" : [ "MPI_Neighbor_alltoallv( ${1:const void* sendbuf} , ${2:const MPI_Count sendcounts[]} , ${3:const MPI_Aint sdispls[]} , ${4:MPI_Datatype sendtype} , ${5:void* recvbuf} , ${6:const MPI_Count recvcounts[]} , ${7:const MPI_Aint rdispls[]} , ${8:MPI_Datatype recvtype} , ${9:MPI_Comm comm});"]
+},
+
+"MPI_Neighbor_alltoallv_init": {
+	"scope": "c,cpp",
+	"prefix": ["MPI_Neighbor_alltoallv_init"],
+	"description" : "MPI Neighbor_alltoallv_init Snippet",
+	"body" : [ "MPI_Neighbor_alltoallv_init( ${1:const void* sendbuf} , ${2:const MPI_Count sendcounts[]} , ${3:const MPI_Aint sdispls[]} , ${4:MPI_Datatype sendtype} , ${5:void* recvbuf} , ${6:const MPI_Count recvcounts[]} , ${7:const MPI_Aint rdispls[]} , ${8:MPI_Datatype recvtype} , ${9:MPI_Comm comm} , ${10:MPI_Info info} , ${11:MPI_Request* request});"]
+},
+
+"MPI_Neighbor_alltoallw": {
+	"scope": "c,cpp",
+	"prefix": ["MPI_Neighbor_alltoallw"],
+	"description" : "MPI Neighbor_alltoallw Snippet",
+	"body" : [ "MPI_Neighbor_alltoallw( ${1:const void* sendbuf} , ${2:const MPI_Count sendcounts[]} , ${3:const MPI_Aint sdispls[]} , ${4:const MPI_Datatype sendtypes[]} , ${5:void* recvbuf} , ${6:const MPI_Count recvcounts[]} , ${7:const MPI_Aint rdispls[]} , ${8:const MPI_Datatype recvtypes[]} , ${9:MPI_Comm comm});"]
+},
+
+"MPI_Neighbor_alltoallw_init": {
+	"scope": "c,cpp",
+	"prefix": ["MPI_Neighbor_alltoallw_init"],
+	"description" : "MPI Neighbor_alltoallw_init Snippet",
+	"body" : [ "MPI_Neighbor_alltoallw_init( ${1:const void* sendbuf} , ${2:const MPI_Count sendcounts[]} , ${3:const MPI_Aint sdispls[]} , ${4:const MPI_Datatype sendtypes[]} , ${5:void* recvbuf} , ${6:const MPI_Count recvcounts[]} , ${7:const MPI_Aint rdispls[]} , ${8:const MPI_Datatype recvtypes[]} , ${9:MPI_Comm comm} , ${10:MPI_Info info} , ${11:MPI_Request* request});"]
+},
+
+"MPI_Op_commutative": {
+	"scope": "c,cpp",
+	"prefix": ["MPI_Op_commutative"],
+	"description" : "MPI Op_commutative Snippet",
+	"body" : [ "MPI_Op_commutative( ${1:MPI_Op op} , ${2:int* commute});"]
+},
+
+"MPI_Op_create": {
+	"scope": "c,cpp",
+	"prefix": ["MPI_Op_create"],
+	"description" : "MPI Op_create Snippet",
+	"body" : [ "MPI_Op_create( ${1:MPI_User_function* user_fn} , ${2:int commute} , ${3:MPI_Op* op});"]
+},
+
+"MPI_Op_free": {
+	"scope": "c,cpp",
+	"prefix": ["MPI_Op_free"],
+	"description" : "MPI Op_free Snippet",
+	"body" : [ "MPI_Op_free( ${1:MPI_Op* op});"]
+},
+
+"MPI_Open_port": {
+	"scope": "c,cpp",
+	"prefix": ["MPI_Open_port"],
+	"description" : "MPI Open_port Snippet",
+	"body" : [ "MPI_Open_port( ${1:MPI_Info info} , ${2:char* port_name});"]
+},
+
+"MPI_Pack": {
+	"scope": "c,cpp",
+	"prefix": ["MPI_Pack"],
+	"description" : "MPI Pack Snippet",
+	"body" : [ "MPI_Pack( ${1:const void* inbuf} , ${2:MPI_Count incount} , ${3:MPI_Datatype datatype} , ${4:void* outbuf} , ${5:MPI_Count outsize} , ${6:MPI_Count* position} , ${7:MPI_Comm comm});"]
+},
+
+"MPI_Pack_external": {
+	"scope": "c,cpp",
+	"prefix": ["MPI_Pack_external"],
+	"description" : "MPI Pack_external Snippet",
+	"body" : [ "MPI_Pack_external( ${1:const char datarep[]} , ${2:const void* inbuf} , ${3:MPI_Count incount} , ${4:MPI_Datatype datatype} , ${5:void* outbuf} , ${6:MPI_Count outsize} , ${7:MPI_Count* position});"]
+},
+
+"MPI_Pack_external_size": {
+	"scope": "c,cpp",
+	"prefix": ["MPI_Pack_external_size"],
+	"description" : "MPI Pack_external_size Snippet",
+	"body" : [ "MPI_Pack_external_size( ${1:const char datarep[]} , ${2:MPI_Count incount} , ${3:MPI_Datatype datatype} , ${4:MPI_Count* size});"]
+},
+
+"MPI_Pack_size": {
+	"scope": "c,cpp",
+	"prefix": ["MPI_Pack_size"],
+	"description" : "MPI Pack_size Snippet",
+	"body" : [ "MPI_Pack_size( ${1:MPI_Count incount} , ${2:MPI_Datatype datatype} , ${3:MPI_Comm comm} , ${4:MPI_Count* size});"]
+},
+
+"MPI_Parrived": {
+	"scope": "c,cpp",
+	"prefix": ["MPI_Parrived"],
+	"description" : "MPI Parrived Snippet",
+	"body" : [ "MPI_Parrived( ${1:MPI_Request request} , ${2:int partition} , ${3:int* flag});"]
+},
+
+"MPI_Pcontrol": {
+	"scope": "c,cpp",
+	"prefix": ["MPI_Pcontrol"],
+	"description" : "MPI Pcontrol Snippet",
+	"body" : [ "MPI_Pcontrol( ${1:const int level} , ${2:... });"]
+},
+
+"MPI_Pready": {
+	"scope": "c,cpp",
+	"prefix": ["MPI_Pready"],
+	"description" : "MPI Pready Snippet",
+	"body" : [ "MPI_Pready( ${1:int partition} , ${2:MPI_Request request});"]
+},
+
+"MPI_Pready_list": {
+	"scope": "c,cpp",
+	"prefix": ["MPI_Pready_list"],
+	"description" : "MPI Pready_list Snippet",
+	"body" : [ "MPI_Pready_list( ${1:int length} , ${2:const int array_of_partitions[]} , ${3:MPI_Request request});"]
+},
+
+"MPI_Pready_range": {
+	"scope": "c,cpp",
+	"prefix": ["MPI_Pready_range"],
+	"description" : "MPI Pready_range Snippet",
+	"body" : [ "MPI_Pready_range( ${1:int partition_low} , ${2:int partition_high} , ${3:MPI_Request request});"]
+},
+
+"MPI_Precv_init": {
+	"scope": "c,cpp",
+	"prefix": ["MPI_Precv_init"],
+	"description" : "MPI Precv_init Snippet",
+	"body" : [ "MPI_Precv_init( ${1:void* buf} , ${2:int partitions} , ${3:MPI_Count count} , ${4:MPI_Datatype datatype} , ${5:int source} , ${6:int tag} , ${7:MPI_Comm comm} , ${8:MPI_Info info} , ${9:MPI_Request* request});"]
+},
+
+"MPI_Probe": {
+	"scope": "c,cpp",
+	"prefix": ["MPI_Probe"],
+	"description" : "MPI Probe Snippet",
+	"body" : [ "MPI_Probe( ${1:int source} , ${2:int tag} , ${3:MPI_Comm comm} , ${4:MPI_Status* status});"]
+},
+
+"MPI_Psend_init": {
+	"scope": "c,cpp",
+	"prefix": ["MPI_Psend_init"],
+	"description" : "MPI Psend_init Snippet",
+	"body" : [ "MPI_Psend_init( ${1:const void* buf} , ${2:int partitions} , ${3:MPI_Count count} , ${4:MPI_Datatype datatype} , ${5:int dest} , ${6:int tag} , ${7:MPI_Comm comm} , ${8:MPI_Info info} , ${9:MPI_Request* request});"]
+},
+
+"MPI_Publish_name": {
+	"scope": "c,cpp",
+	"prefix": ["MPI_Publish_name"],
+	"description" : "MPI Publish_name Snippet",
+	"body" : [ "MPI_Publish_name( ${1:const char* service_name} , ${2:MPI_Info info} , ${3:const char* port_name});"]
+},
+
+"MPI_Put": {
+	"scope": "c,cpp",
+	"prefix": ["MPI_Put"],
+	"description" : "MPI Put Snippet",
+	"body" : [ "MPI_Put( ${1:const void* origin_addr} , ${2:MPI_Count origin_count} , ${3:MPI_Datatype origin_datatype} , ${4:int target_rank} , ${5:MPI_Aint target_disp} , ${6:MPI_Count target_count} , ${7:MPI_Datatype target_datatype} , ${8:MPI_Win win});"]
+},
+
+"MPI_Query_thread": {
+	"scope": "c,cpp",
+	"prefix": ["MPI_Query_thread"],
+	"description" : "MPI Query_thread Snippet",
+	"body" : [ "MPI_Query_thread( ${1:int* provided});"]
+},
+
+"MPI_Raccumulate": {
+	"scope": "c,cpp",
+	"prefix": ["MPI_Raccumulate"],
+	"description" : "MPI Raccumulate Snippet",
+	"body" : [ "MPI_Raccumulate( ${1:const void* origin_addr} , ${2:MPI_Count origin_count} , ${3:MPI_Datatype origin_datatype} , ${4:int target_rank} , ${5:MPI_Aint target_disp} , ${6:MPI_Count target_count} , ${7:MPI_Datatype target_datatype} , ${8:MPI_Op op} , ${9:MPI_Win win} , ${10:MPI_Request* request});"]
+},
+
+"MPI_Recv": {
+	"scope": "c,cpp",
+	"prefix": ["MPI_Recv"],
+	"description" : "MPI Recv Snippet",
+	"body" : [ "MPI_Recv( ${1:void* buf} , ${2:MPI_Count count} , ${3:MPI_Datatype datatype} , ${4:int source} , ${5:int tag} , ${6:MPI_Comm comm} , ${7:MPI_Status* status});"]
+},
+
+"MPI_Recv_init": {
+	"scope": "c,cpp",
+	"prefix": ["MPI_Recv_init"],
+	"description" : "MPI Recv_init Snippet",
+	"body" : [ "MPI_Recv_init( ${1:void* buf} , ${2:MPI_Count count} , ${3:MPI_Datatype datatype} , ${4:int source} , ${5:int tag} , ${6:MPI_Comm comm} , ${7:MPI_Request* request});"]
+},
+
+"MPI_Reduce": {
+	"scope": "c,cpp",
+	"prefix": ["MPI_Reduce"],
+	"description" : "MPI Reduce Snippet",
+	"body" : [ "MPI_Reduce( ${1:const void* sendbuf} , ${2:void* recvbuf} , ${3:MPI_Count count} , ${4:MPI_Datatype datatype} , ${5:MPI_Op op} , ${6:int root} , ${7:MPI_Comm comm});"]
+},
+
+"MPI_Reduce_init": {
+	"scope": "c,cpp",
+	"prefix": ["MPI_Reduce_init"],
+	"description" : "MPI Reduce_init Snippet",
+	"body" : [ "MPI_Reduce_init( ${1:const void* sendbuf} , ${2:void* recvbuf} , ${3:MPI_Count count} , ${4:MPI_Datatype datatype} , ${5:MPI_Op op} , ${6:int root} , ${7:MPI_Comm comm} , ${8:MPI_Info info} , ${9:MPI_Request* request});"]
+},
+
+"MPI_Reduce_local": {
+	"scope": "c,cpp",
+	"prefix": ["MPI_Reduce_local"],
+	"description" : "MPI Reduce_local Snippet",
+	"body" : [ "MPI_Reduce_local( ${1:const void* inbuf} , ${2:void* inoutbuf} , ${3:MPI_Count count} , ${4:MPI_Datatype datatype} , ${5:MPI_Op op});"]
+},
+
+"MPI_Reduce_scatter": {
+	"scope": "c,cpp",
+	"prefix": ["MPI_Reduce_scatter"],
+	"description" : "MPI Reduce_scatter Snippet",
+	"body" : [ "MPI_Reduce_scatter( ${1:const void* sendbuf} , ${2:void* recvbuf} , ${3:const MPI_Count recvcounts[]} , ${4:MPI_Datatype datatype} , ${5:MPI_Op op} , ${6:MPI_Comm comm});"]
+},
+
+"MPI_Reduce_scatter_block": {
+	"scope": "c,cpp",
+	"prefix": ["MPI_Reduce_scatter_block"],
+	"description" : "MPI Reduce_scatter_block Snippet",
+	"body" : [ "MPI_Reduce_scatter_block( ${1:const void* sendbuf} , ${2:void* recvbuf} , ${3:MPI_Count recvcount} , ${4:MPI_Datatype datatype} , ${5:MPI_Op op} , ${6:MPI_Comm comm});"]
+},
+
+"MPI_Reduce_scatter_block_init": {
+	"scope": "c,cpp",
+	"prefix": ["MPI_Reduce_scatter_block_init"],
+	"description" : "MPI Reduce_scatter_block_init Snippet",
+	"body" : [ "MPI_Reduce_scatter_block_init( ${1:const void* sendbuf} , ${2:void* recvbuf} , ${3:MPI_Count recvcount} , ${4:MPI_Datatype datatype} , ${5:MPI_Op op} , ${6:MPI_Comm comm} , ${7:MPI_Info info} , ${8:MPI_Request* request});"]
+},
+
+"MPI_Reduce_scatter_init": {
+	"scope": "c,cpp",
+	"prefix": ["MPI_Reduce_scatter_init"],
+	"description" : "MPI Reduce_scatter_init Snippet",
+	"body" : [ "MPI_Reduce_scatter_init( ${1:const void* sendbuf} , ${2:void* recvbuf} , ${3:const MPI_Count recvcounts[]} , ${4:MPI_Datatype datatype} , ${5:MPI_Op op} , ${6:MPI_Comm comm} , ${7:MPI_Info info} , ${8:MPI_Request* request});"]
+},
+
+"MPI_Register_datarep": {
+	"scope": "c,cpp",
+	"prefix": ["MPI_Register_datarep"],
+	"description" : "MPI Register_datarep Snippet",
+	"body" : [ "MPI_Register_datarep( ${1:const char* datarep} , ${2:MPI_Datarep_conversion_function* read_conversion_fn} , ${3:MPI_Datarep_conversion_function* write_conversion_fn} , ${4:MPI_Datarep_extent_function* dtype_file_extent_fn} , ${5:void* extra_state});"]
+},
+
+"MPI_Request_free": {
+	"scope": "c,cpp",
+	"prefix": ["MPI_Request_free"],
+	"description" : "MPI Request_free Snippet",
+	"body" : [ "MPI_Request_free( ${1:MPI_Request* request});"]
+},
+
+"MPI_Request_get_status": {
+	"scope": "c,cpp",
+	"prefix": ["MPI_Request_get_status"],
+	"description" : "MPI Request_get_status Snippet",
+	"body" : [ "MPI_Request_get_status( ${1:MPI_Request request} , ${2:int* flag} , ${3:MPI_Status* status});"]
+},
+
+"MPI_Rget": {
+	"scope": "c,cpp",
+	"prefix": ["MPI_Rget"],
+	"description" : "MPI Rget Snippet",
+	"body" : [ "MPI_Rget( ${1:void* origin_addr} , ${2:MPI_Count origin_count} , ${3:MPI_Datatype origin_datatype} , ${4:int target_rank} , ${5:MPI_Aint target_disp} , ${6:MPI_Count target_count} , ${7:MPI_Datatype target_datatype} , ${8:MPI_Win win} , ${9:MPI_Request* request});"]
+},
+
+"MPI_Rget_accumulate": {
+	"scope": "c,cpp",
+	"prefix": ["MPI_Rget_accumulate"],
+	"description" : "MPI Rget_accumulate Snippet",
+	"body" : [ "MPI_Rget_accumulate( ${1:const void* origin_addr} , ${2:MPI_Count origin_count} , ${3:MPI_Datatype origin_datatype} , ${4:void* result_addr} , ${5:MPI_Count result_count} , ${6:MPI_Datatype result_datatype} , ${7:int target_rank} , ${8:MPI_Aint target_disp} , ${9:MPI_Count target_count} , ${10:MPI_Datatype target_datatype} , ${11:MPI_Op op} , ${12:MPI_Win win} , ${13:MPI_Request* request});"]
+},
+
+"MPI_Rput": {
+	"scope": "c,cpp",
+	"prefix": ["MPI_Rput"],
+	"description" : "MPI Rput Snippet",
+	"body" : [ "MPI_Rput( ${1:const void* origin_addr} , ${2:MPI_Count origin_count} , ${3:MPI_Datatype origin_datatype} , ${4:int target_rank} , ${5:MPI_Aint target_disp} , ${6:MPI_Count target_count} , ${7:MPI_Datatype target_datatype} , ${8:MPI_Win win} , ${9:MPI_Request* request});"]
+},
+
+"MPI_Rsend": {
+	"scope": "c,cpp",
+	"prefix": ["MPI_Rsend"],
+	"description" : "MPI Rsend Snippet",
+	"body" : [ "MPI_Rsend( ${1:const void* buf} , ${2:MPI_Count count} , ${3:MPI_Datatype datatype} , ${4:int dest} , ${5:int tag} , ${6:MPI_Comm comm});"]
+},
+
+"MPI_Rsend_init": {
+	"scope": "c,cpp",
+	"prefix": ["MPI_Rsend_init"],
+	"description" : "MPI Rsend_init Snippet",
+	"body" : [ "MPI_Rsend_init( ${1:const void* buf} , ${2:MPI_Count count} , ${3:MPI_Datatype datatype} , ${4:int dest} , ${5:int tag} , ${6:MPI_Comm comm} , ${7:MPI_Request* request});"]
+},
+
+"MPI_Scan": {
+	"scope": "c,cpp",
+	"prefix": ["MPI_Scan"],
+	"description" : "MPI Scan Snippet",
+	"body" : [ "MPI_Scan( ${1:const void* sendbuf} , ${2:void* recvbuf} , ${3:MPI_Count count} , ${4:MPI_Datatype datatype} , ${5:MPI_Op op} , ${6:MPI_Comm comm});"]
+},
+
+"MPI_Scan_init": {
+	"scope": "c,cpp",
+	"prefix": ["MPI_Scan_init"],
+	"description" : "MPI Scan_init Snippet",
+	"body" : [ "MPI_Scan_init( ${1:const void* sendbuf} , ${2:void* recvbuf} , ${3:MPI_Count count} , ${4:MPI_Datatype datatype} , ${5:MPI_Op op} , ${6:MPI_Comm comm} , ${7:MPI_Info info} , ${8:MPI_Request* request});"]
+},
+
+"MPI_Scatter": {
+	"scope": "c,cpp",
+	"prefix": ["MPI_Scatter"],
+	"description" : "MPI Scatter Snippet",
+	"body" : [ "MPI_Scatter( ${1:const void* sendbuf} , ${2:MPI_Count sendcount} , ${3:MPI_Datatype sendtype} , ${4:void* recvbuf} , ${5:MPI_Count recvcount} , ${6:MPI_Datatype recvtype} , ${7:int root} , ${8:MPI_Comm comm});"]
+},
+
+"MPI_Scatter_init": {
+	"scope": "c,cpp",
+	"prefix": ["MPI_Scatter_init"],
+	"description" : "MPI Scatter_init Snippet",
+	"body" : [ "MPI_Scatter_init( ${1:const void* sendbuf} , ${2:MPI_Count sendcount} , ${3:MPI_Datatype sendtype} , ${4:void* recvbuf} , ${5:MPI_Count recvcount} , ${6:MPI_Datatype recvtype} , ${7:int root} , ${8:MPI_Comm comm} , ${9:MPI_Info info} , ${10:MPI_Request* request});"]
+},
+
+"MPI_Scatterv": {
+	"scope": "c,cpp",
+	"prefix": ["MPI_Scatterv"],
+	"description" : "MPI Scatterv Snippet",
+	"body" : [ "MPI_Scatterv( ${1:const void* sendbuf} , ${2:const MPI_Count sendcounts[]} , ${3:const MPI_Aint displs[]} , ${4:MPI_Datatype sendtype} , ${5:void* recvbuf} , ${6:MPI_Count recvcount} , ${7:MPI_Datatype recvtype} , ${8:int root} , ${9:MPI_Comm comm});"]
+},
+
+"MPI_Scatterv_init": {
+	"scope": "c,cpp",
+	"prefix": ["MPI_Scatterv_init"],
+	"description" : "MPI Scatterv_init Snippet",
+	"body" : [ "MPI_Scatterv_init( ${1:const void* sendbuf} , ${2:const MPI_Count sendcounts[]} , ${3:const MPI_Aint displs[]} , ${4:MPI_Datatype sendtype} , ${5:void* recvbuf} , ${6:MPI_Count recvcount} , ${7:MPI_Datatype recvtype} , ${8:int root} , ${9:MPI_Comm comm} , ${10:MPI_Info info} , ${11:MPI_Request* request});"]
+},
+
+"MPI_Send": {
+	"scope": "c,cpp",
+	"prefix": ["MPI_Send"],
+	"description" : "MPI Send Snippet",
+	"body" : [ "MPI_Send( ${1:const void* buf} , ${2:MPI_Count count} , ${3:MPI_Datatype datatype} , ${4:int dest} , ${5:int tag} , ${6:MPI_Comm comm});"]
+},
+
+"MPI_Send_init": {
+	"scope": "c,cpp",
+	"prefix": ["MPI_Send_init"],
+	"description" : "MPI Send_init Snippet",
+	"body" : [ "MPI_Send_init( ${1:const void* buf} , ${2:MPI_Count count} , ${3:MPI_Datatype datatype} , ${4:int dest} , ${5:int tag} , ${6:MPI_Comm comm} , ${7:MPI_Request* request});"]
+},
+
+"MPI_Sendrecv": {
+	"scope": "c,cpp",
+	"prefix": ["MPI_Sendrecv"],
+	"description" : "MPI Sendrecv Snippet",
+	"body" : [ "MPI_Sendrecv( ${1:const void* sendbuf} , ${2:MPI_Count sendcount} , ${3:MPI_Datatype sendtype} , ${4:int dest} , ${5:int sendtag} , ${6:void* recvbuf} , ${7:MPI_Count recvcount} , ${8:MPI_Datatype recvtype} , ${9:int source} , ${10:int recvtag} , ${11:MPI_Comm comm} , ${12:MPI_Status* status});"]
+},
+
+"MPI_Sendrecv_replace": {
+	"scope": "c,cpp",
+	"prefix": ["MPI_Sendrecv_replace"],
+	"description" : "MPI Sendrecv_replace Snippet",
+	"body" : [ "MPI_Sendrecv_replace( ${1:void* buf} , ${2:MPI_Count count} , ${3:MPI_Datatype datatype} , ${4:int dest} , ${5:int sendtag} , ${6:int source} , ${7:int recvtag} , ${8:MPI_Comm comm} , ${9:MPI_Status* status});"]
+},
+
+"MPI_Session_call_errhandler": {
+	"scope": "c,cpp",
+	"prefix": ["MPI_Session_call_errhandler"],
+	"description" : "MPI Session_call_errhandler Snippet",
+	"body" : [ "MPI_Session_call_errhandler( ${1:MPI_Session session} , ${2:int errorcode});"]
+},
+
+"MPI_Session_create_errhandler": {
+	"scope": "c,cpp",
+	"prefix": ["MPI_Session_create_errhandler"],
+	"description" : "MPI Session_create_errhandler Snippet",
+	"body" : [ "MPI_Session_create_errhandler( ${1:MPI_Session_errhandler_function* session_errhandler_fn} , ${2:MPI_Errhandler* errhandler});"]
+},
+
+"MPI_Session_finalize": {
+	"scope": "c,cpp",
+	"prefix": ["MPI_Session_finalize"],
+	"description" : "MPI Session_finalize Snippet",
+	"body" : [ "MPI_Session_finalize( ${1:MPI_Session* session});"]
+},
+
+"MPI_Session_get_errhandler": {
+	"scope": "c,cpp",
+	"prefix": ["MPI_Session_get_errhandler"],
+	"description" : "MPI Session_get_errhandler Snippet",
+	"body" : [ "MPI_Session_get_errhandler( ${1:MPI_Session session} , ${2:MPI_Errhandler* errhandler});"]
+},
+
+"MPI_Session_get_info": {
+	"scope": "c,cpp",
+	"prefix": ["MPI_Session_get_info"],
+	"description" : "MPI Session_get_info Snippet",
+	"body" : [ "MPI_Session_get_info( ${1:MPI_Session session} , ${2:MPI_Info* info_used});"]
+},
+
+"MPI_Session_get_nth_pset": {
+	"scope": "c,cpp",
+	"prefix": ["MPI_Session_get_nth_pset"],
+	"description" : "MPI Session_get_nth_pset Snippet",
+	"body" : [ "MPI_Session_get_nth_pset( ${1:MPI_Session session} , ${2:MPI_Info info} , ${3:int n} , ${4:int* pset_len} , ${5:char* pset_name});"]
+},
+
+"MPI_Session_get_num_psets": {
+	"scope": "c,cpp",
+	"prefix": ["MPI_Session_get_num_psets"],
+	"description" : "MPI Session_get_num_psets Snippet",
+	"body" : [ "MPI_Session_get_num_psets( ${1:MPI_Session session} , ${2:MPI_Info info} , ${3:int* npset_names});"]
+},
+
+"MPI_Session_get_pset_info": {
+	"scope": "c,cpp",
+	"prefix": ["MPI_Session_get_pset_info"],
+	"description" : "MPI Session_get_pset_info Snippet",
+	"body" : [ "MPI_Session_get_pset_info( ${1:MPI_Session session} , ${2:const char* pset_name} , ${3:MPI_Info* info});"]
+},
+
+"MPI_Session_init": {
+	"scope": "c,cpp",
+	"prefix": ["MPI_Session_init"],
+	"description" : "MPI Session_init Snippet",
+	"body" : [ "MPI_Session_init( ${1:MPI_Info info} , ${2:MPI_Errhandler errhandler} , ${3:MPI_Session* session});"]
+},
+
+"MPI_Session_set_errhandler": {
+	"scope": "c,cpp",
+	"prefix": ["MPI_Session_set_errhandler"],
+	"description" : "MPI Session_set_errhandler Snippet",
+	"body" : [ "MPI_Session_set_errhandler( ${1:MPI_Session session} , ${2:MPI_Errhandler errhandler});"]
+},
+
+"MPI_Ssend": {
+	"scope": "c,cpp",
+	"prefix": ["MPI_Ssend"],
+	"description" : "MPI Ssend Snippet",
+	"body" : [ "MPI_Ssend( ${1:const void* buf} , ${2:MPI_Count count} , ${3:MPI_Datatype datatype} , ${4:int dest} , ${5:int tag} , ${6:MPI_Comm comm});"]
+},
+
+"MPI_Ssend_init": {
+	"scope": "c,cpp",
+	"prefix": ["MPI_Ssend_init"],
+	"description" : "MPI Ssend_init Snippet",
+	"body" : [ "MPI_Ssend_init( ${1:const void* buf} , ${2:MPI_Count count} , ${3:MPI_Datatype datatype} , ${4:int dest} , ${5:int tag} , ${6:MPI_Comm comm} , ${7:MPI_Request* request});"]
+},
+
+"MPI_Start": {
+	"scope": "c,cpp",
+	"prefix": ["MPI_Start"],
+	"description" : "MPI Start Snippet",
+	"body" : [ "MPI_Start( ${1:MPI_Request* request});"]
+},
+
+"MPI_Startall": {
+	"scope": "c,cpp",
+	"prefix": ["MPI_Startall"],
+	"description" : "MPI Startall Snippet",
+	"body" : [ "MPI_Startall( ${1:int count} , ${2:MPI_Request array_of_requests[]});"]
+},
+
+"MPI_Status_set_cancelled": {
+	"scope": "c,cpp",
+	"prefix": ["MPI_Status_set_cancelled"],
+	"description" : "MPI Status_set_cancelled Snippet",
+	"body" : [ "MPI_Status_set_cancelled( ${1:MPI_Status* status} , ${2:int flag});"]
+},
+
+"MPI_Status_set_elements": {
+	"scope": "c,cpp",
+	"prefix": ["MPI_Status_set_elements"],
+	"description" : "MPI Status_set_elements Snippet",
+	"body" : [ "MPI_Status_set_elements( ${1:MPI_Status* status} , ${2:MPI_Datatype datatype} , ${3:MPI_Count count});"]
+},
+
+"MPI_Status_set_elements_x": {
+	"scope": "c,cpp",
+	"prefix": ["MPI_Status_set_elements_x"],
+	"description" : "MPI Status_set_elements_x Snippet",
+	"body" : [ "MPI_Status_set_elements_x( ${1:MPI_Status* status} , ${2:MPI_Datatype datatype} , ${3:MPI_Count count});"]
+},
+
+"MPI_T_category_changed": {
+	"scope": "c,cpp",
+	"prefix": ["MPI_T_category_changed"],
+	"description" : "MPI T_category_changed Snippet",
+	"body" : [ "MPI_T_category_changed( ${1:int* update_number});"]
+},
+
+"MPI_T_category_get_categories": {
+	"scope": "c,cpp",
+	"prefix": ["MPI_T_category_get_categories"],
+	"description" : "MPI T_category_get_categories Snippet",
+	"body" : [ "MPI_T_category_get_categories( ${1:int cat_index} , ${2:int len} , ${3:int indices[]});"]
+},
+
+"MPI_T_category_get_cvars": {
+	"scope": "c,cpp",
+	"prefix": ["MPI_T_category_get_cvars"],
+	"description" : "MPI T_category_get_cvars Snippet",
+	"body" : [ "MPI_T_category_get_cvars( ${1:int cat_index} , ${2:int len} , ${3:int indices[]});"]
+},
+
+"MPI_T_category_get_events": {
+	"scope": "c,cpp",
+	"prefix": ["MPI_T_category_get_events"],
+	"description" : "MPI T_category_get_events Snippet",
+	"body" : [ "MPI_T_category_get_events( ${1:int cat_index} , ${2:int len} , ${3:int indices[]});"]
+},
+
+"MPI_T_category_get_index": {
+	"scope": "c,cpp",
+	"prefix": ["MPI_T_category_get_index"],
+	"description" : "MPI T_category_get_index Snippet",
+	"body" : [ "MPI_T_category_get_index( ${1:const char* name} , ${2:int* cat_index});"]
+},
+
+"MPI_T_category_get_info": {
+	"scope": "c,cpp",
+	"prefix": ["MPI_T_category_get_info"],
+	"description" : "MPI T_category_get_info Snippet",
+	"body" : [ "MPI_T_category_get_info( ${1:int cat_index} , ${2:char* name} , ${3:int* name_len} , ${4:char* desc} , ${5:int* desc_len} , ${6:int* num_cvars} , ${7:int* num_pvars} , ${8:int* num_categories});"]
+},
+
+"MPI_T_category_get_num": {
+	"scope": "c,cpp",
+	"prefix": ["MPI_T_category_get_num"],
+	"description" : "MPI T_category_get_num Snippet",
+	"body" : [ "MPI_T_category_get_num( ${1:int* num_cat});"]
+},
+
+"MPI_T_category_get_num_events": {
+	"scope": "c,cpp",
+	"prefix": ["MPI_T_category_get_num_events"],
+	"description" : "MPI T_category_get_num_events Snippet",
+	"body" : [ "MPI_T_category_get_num_events( ${1:int cat_index} , ${2:int* num_events});"]
+},
+
+"MPI_T_category_get_pvars": {
+	"scope": "c,cpp",
+	"prefix": ["MPI_T_category_get_pvars"],
+	"description" : "MPI T_category_get_pvars Snippet",
+	"body" : [ "MPI_T_category_get_pvars( ${1:int cat_index} , ${2:int len} , ${3:int indices[]});"]
+},
+
+"MPI_T_cvar_get_index": {
+	"scope": "c,cpp",
+	"prefix": ["MPI_T_cvar_get_index"],
+	"description" : "MPI T_cvar_get_index Snippet",
+	"body" : [ "MPI_T_cvar_get_index( ${1:const char* name} , ${2:int* cvar_index});"]
+},
+
+"MPI_T_cvar_get_info": {
+	"scope": "c,cpp",
+	"prefix": ["MPI_T_cvar_get_info"],
+	"description" : "MPI T_cvar_get_info Snippet",
+	"body" : [ "MPI_T_cvar_get_info( ${1:int cvar_index} , ${2:char* name} , ${3:int* name_len} , ${4:int* verbosity} , ${5:MPI_Datatype* datatype} , ${6:MPI_T_enum* enumtype} , ${7:char* desc} , ${8:int* desc_len} , ${9:int* bind} , ${10:int* scope});"]
+},
+
+"MPI_T_cvar_get_num": {
+	"scope": "c,cpp",
+	"prefix": ["MPI_T_cvar_get_num"],
+	"description" : "MPI T_cvar_get_num Snippet",
+	"body" : [ "MPI_T_cvar_get_num( ${1:int* num_cvar});"]
+},
+
+"MPI_T_cvar_handle_alloc": {
+	"scope": "c,cpp",
+	"prefix": ["MPI_T_cvar_handle_alloc"],
+	"description" : "MPI T_cvar_handle_alloc Snippet",
+	"body" : [ "MPI_T_cvar_handle_alloc( ${1:int cvar_index} , ${2:void* obj_handle} , ${3:MPI_T_cvar_handle* handle} , ${4:int* count});"]
+},
+
+"MPI_T_cvar_handle_free": {
+	"scope": "c,cpp",
+	"prefix": ["MPI_T_cvar_handle_free"],
+	"description" : "MPI T_cvar_handle_free Snippet",
+	"body" : [ "MPI_T_cvar_handle_free( ${1:MPI_T_cvar_handle* handle});"]
+},
+
+"MPI_T_cvar_read": {
+	"scope": "c,cpp",
+	"prefix": ["MPI_T_cvar_read"],
+	"description" : "MPI T_cvar_read Snippet",
+	"body" : [ "MPI_T_cvar_read( ${1:MPI_T_cvar_handle handle} , ${2:void* buf});"]
+},
+
+"MPI_T_cvar_write": {
+	"scope": "c,cpp",
+	"prefix": ["MPI_T_cvar_write"],
+	"description" : "MPI T_cvar_write Snippet",
+	"body" : [ "MPI_T_cvar_write( ${1:MPI_T_cvar_handle handle} , ${2:const void* buf});"]
+},
+
+"MPI_T_enum_get_info": {
+	"scope": "c,cpp",
+	"prefix": ["MPI_T_enum_get_info"],
+	"description" : "MPI T_enum_get_info Snippet",
+	"body" : [ "MPI_T_enum_get_info( ${1:MPI_T_enum enumtype} , ${2:int* num} , ${3:char* name} , ${4:int* name_len});"]
+},
+
+"MPI_T_enum_get_item": {
+	"scope": "c,cpp",
+	"prefix": ["MPI_T_enum_get_item"],
+	"description" : "MPI T_enum_get_item Snippet",
+	"body" : [ "MPI_T_enum_get_item( ${1:MPI_T_enum enumtype} , ${2:int index} , ${3:int* value} , ${4:char* name} , ${5:int* name_len});"]
+},
+
+"MPI_T_event_callback_get_info": {
+	"scope": "c,cpp",
+	"prefix": ["MPI_T_event_callback_get_info"],
+	"description" : "MPI T_event_callback_get_info Snippet",
+	"body" : [ "MPI_T_event_callback_get_info( ${1:MPI_T_event_registration event_registration} , ${2:MPI_T_cb_safety cb_safety} , ${3:MPI_Info* info_used});"]
+},
+
+"MPI_T_event_callback_set_info": {
+	"scope": "c,cpp",
+	"prefix": ["MPI_T_event_callback_set_info"],
+	"description" : "MPI T_event_callback_set_info Snippet",
+	"body" : [ "MPI_T_event_callback_set_info( ${1:MPI_T_event_registration event_registration} , ${2:MPI_T_cb_safety cb_safety} , ${3:MPI_Info info});"]
+},
+
+"MPI_T_event_copy": {
+	"scope": "c,cpp",
+	"prefix": ["MPI_T_event_copy"],
+	"description" : "MPI T_event_copy Snippet",
+	"body" : [ "MPI_T_event_copy( ${1:MPI_T_event_instance event_instance} , ${2:void* buffer});"]
+},
+
+"MPI_T_event_get_index": {
+	"scope": "c,cpp",
+	"prefix": ["MPI_T_event_get_index"],
+	"description" : "MPI T_event_get_index Snippet",
+	"body" : [ "MPI_T_event_get_index( ${1:const char* name} , ${2:int* event_index});"]
+},
+
+"MPI_T_event_get_info": {
+	"scope": "c,cpp",
+	"prefix": ["MPI_T_event_get_info"],
+	"description" : "MPI T_event_get_info Snippet",
+	"body" : [ "MPI_T_event_get_info( ${1:int event_index} , ${2:char* name} , ${3:int* name_len} , ${4:int* verbosity} , ${5:MPI_Datatype array_of_datatypes[]} , ${6:MPI_Aint array_of_displacements[]} , ${7:int* num_elements} , ${8:MPI_T_enum* enumtype} , ${9:MPI_Info* info} , ${10:char* desc} , ${11:int* desc_len} , ${12:int* bind});"]
+},
+
+"MPI_T_event_get_num": {
+	"scope": "c,cpp",
+	"prefix": ["MPI_T_event_get_num"],
+	"description" : "MPI T_event_get_num Snippet",
+	"body" : [ "MPI_T_event_get_num( ${1:int* num_events});"]
+},
+
+"MPI_T_event_get_source": {
+	"scope": "c,cpp",
+	"prefix": ["MPI_T_event_get_source"],
+	"description" : "MPI T_event_get_source Snippet",
+	"body" : [ "MPI_T_event_get_source( ${1:MPI_T_event_instance event_instance} , ${2:int* source_index});"]
+},
+
+"MPI_T_event_get_timestamp": {
+	"scope": "c,cpp",
+	"prefix": ["MPI_T_event_get_timestamp"],
+	"description" : "MPI T_event_get_timestamp Snippet",
+	"body" : [ "MPI_T_event_get_timestamp( ${1:MPI_T_event_instance event_instance} , ${2:MPI_Count* event_timestamp});"]
+},
+
+"MPI_T_event_handle_alloc": {
+	"scope": "c,cpp",
+	"prefix": ["MPI_T_event_handle_alloc"],
+	"description" : "MPI T_event_handle_alloc Snippet",
+	"body" : [ "MPI_T_event_handle_alloc( ${1:int event_index} , ${2:void* obj_handle} , ${3:MPI_Info info} , ${4:MPI_T_event_registration* event_registration});"]
+},
+
+"MPI_T_event_handle_free": {
+	"scope": "c,cpp",
+	"prefix": ["MPI_T_event_handle_free"],
+	"description" : "MPI T_event_handle_free Snippet",
+	"body" : [ "MPI_T_event_handle_free( ${1:MPI_T_event_registration event_registration} , ${2:void* user_data} , ${3:MPI_T_event_free_cb_function free_cb_function});"]
+},
+
+"MPI_T_event_handle_get_info": {
+	"scope": "c,cpp",
+	"prefix": ["MPI_T_event_handle_get_info"],
+	"description" : "MPI T_event_handle_get_info Snippet",
+	"body" : [ "MPI_T_event_handle_get_info( ${1:MPI_T_event_registration event_registration} , ${2:MPI_Info* info_used});"]
+},
+
+"MPI_T_event_handle_set_info": {
+	"scope": "c,cpp",
+	"prefix": ["MPI_T_event_handle_set_info"],
+	"description" : "MPI T_event_handle_set_info Snippet",
+	"body" : [ "MPI_T_event_handle_set_info( ${1:MPI_T_event_registration event_registration} , ${2:MPI_Info info});"]
+},
+
+"MPI_T_event_read": {
+	"scope": "c,cpp",
+	"prefix": ["MPI_T_event_read"],
+	"description" : "MPI T_event_read Snippet",
+	"body" : [ "MPI_T_event_read( ${1:MPI_T_event_instance event_instance} , ${2:int element_index} , ${3:void* buffer});"]
+},
+
+"MPI_T_event_register_callback": {
+	"scope": "c,cpp",
+	"prefix": ["MPI_T_event_register_callback"],
+	"description" : "MPI T_event_register_callback Snippet",
+	"body" : [ "MPI_T_event_register_callback( ${1:MPI_T_event_registration event_registration} , ${2:MPI_T_cb_safety cb_safety} , ${3:MPI_Info info} , ${4:void* user_data} , ${5:MPI_T_event_cb_function event_cb_function});"]
+},
+
+"MPI_T_event_set_dropped_handler": {
+	"scope": "c,cpp",
+	"prefix": ["MPI_T_event_set_dropped_handler"],
+	"description" : "MPI T_event_set_dropped_handler Snippet",
+	"body" : [ "MPI_T_event_set_dropped_handler( ${1:MPI_T_event_registration event_registration} , ${2:MPI_T_event_dropped_cb_function dropped_cb_function});"]
+},
+
+"MPI_T_finalize": {
+	"scope": "c,cpp",
+	"prefix": ["MPI_T_finalize"],
+	"description" : "MPI T_finalize Snippet",
+	"body" : [ "MPI_T_finalize();"]
+},
+
+"MPI_T_init_thread": {
+	"scope": "c,cpp",
+	"prefix": ["MPI_T_init_thread"],
+	"description" : "MPI T_init_thread Snippet",
+	"body" : [ "MPI_T_init_thread( ${1:int required} , ${2:int* provided});"]
+},
+
+"MPI_T_pvar_get_index": {
+	"scope": "c,cpp",
+	"prefix": ["MPI_T_pvar_get_index"],
+	"description" : "MPI T_pvar_get_index Snippet",
+	"body" : [ "MPI_T_pvar_get_index( ${1:const char* name} , ${2:int var_class} , ${3:int* pvar_index});"]
+},
+
+"MPI_T_pvar_get_info": {
+	"scope": "c,cpp",
+	"prefix": ["MPI_T_pvar_get_info"],
+	"description" : "MPI T_pvar_get_info Snippet",
+	"body" : [ "MPI_T_pvar_get_info( ${1:int pvar_index} , ${2:char* name} , ${3:int* name_len} , ${4:int* verbosity} , ${5:int* var_class} , ${6:MPI_Datatype* datatype} , ${7:MPI_T_enum* enumtype} , ${8:char* desc} , ${9:int* desc_len} , ${10:int* bind} , ${11:int* readonly} , ${12:int* continuous} , ${13:int* atomic});"]
+},
+
+"MPI_T_pvar_get_num": {
+	"scope": "c,cpp",
+	"prefix": ["MPI_T_pvar_get_num"],
+	"description" : "MPI T_pvar_get_num Snippet",
+	"body" : [ "MPI_T_pvar_get_num( ${1:int* num_pvar});"]
+},
+
+"MPI_T_pvar_handle_alloc": {
+	"scope": "c,cpp",
+	"prefix": ["MPI_T_pvar_handle_alloc"],
+	"description" : "MPI T_pvar_handle_alloc Snippet",
+	"body" : [ "MPI_T_pvar_handle_alloc( ${1:MPI_T_pvar_session pe_session} , ${2:int pvar_index} , ${3:void* obj_handle} , ${4:MPI_T_pvar_handle* handle} , ${5:int* count});"]
+},
+
+"MPI_T_pvar_handle_free": {
+	"scope": "c,cpp",
+	"prefix": ["MPI_T_pvar_handle_free"],
+	"description" : "MPI T_pvar_handle_free Snippet",
+	"body" : [ "MPI_T_pvar_handle_free( ${1:MPI_T_pvar_session pe_session} , ${2:MPI_T_pvar_handle* handle});"]
+},
+
+"MPI_T_pvar_read": {
+	"scope": "c,cpp",
+	"prefix": ["MPI_T_pvar_read"],
+	"description" : "MPI T_pvar_read Snippet",
+	"body" : [ "MPI_T_pvar_read( ${1:MPI_T_pvar_session pe_session} , ${2:MPI_T_pvar_handle handle} , ${3:void* buf});"]
+},
+
+"MPI_T_pvar_readreset": {
+	"scope": "c,cpp",
+	"prefix": ["MPI_T_pvar_readreset"],
+	"description" : "MPI T_pvar_readreset Snippet",
+	"body" : [ "MPI_T_pvar_readreset( ${1:MPI_T_pvar_session pe_session} , ${2:MPI_T_pvar_handle handle} , ${3:void* buf});"]
+},
+
+"MPI_T_pvar_reset": {
+	"scope": "c,cpp",
+	"prefix": ["MPI_T_pvar_reset"],
+	"description" : "MPI T_pvar_reset Snippet",
+	"body" : [ "MPI_T_pvar_reset( ${1:MPI_T_pvar_session pe_session} , ${2:MPI_T_pvar_handle handle});"]
+},
+
+"MPI_T_pvar_session_create": {
+	"scope": "c,cpp",
+	"prefix": ["MPI_T_pvar_session_create"],
+	"description" : "MPI T_pvar_session_create Snippet",
+	"body" : [ "MPI_T_pvar_session_create( ${1:MPI_T_pvar_session* pe_session});"]
+},
+
+"MPI_T_pvar_session_free": {
+	"scope": "c,cpp",
+	"prefix": ["MPI_T_pvar_session_free"],
+	"description" : "MPI T_pvar_session_free Snippet",
+	"body" : [ "MPI_T_pvar_session_free( ${1:MPI_T_pvar_session* pe_session});"]
+},
+
+"MPI_T_pvar_start": {
+	"scope": "c,cpp",
+	"prefix": ["MPI_T_pvar_start"],
+	"description" : "MPI T_pvar_start Snippet",
+	"body" : [ "MPI_T_pvar_start( ${1:MPI_T_pvar_session pe_session} , ${2:MPI_T_pvar_handle handle});"]
+},
+
+"MPI_T_pvar_stop": {
+	"scope": "c,cpp",
+	"prefix": ["MPI_T_pvar_stop"],
+	"description" : "MPI T_pvar_stop Snippet",
+	"body" : [ "MPI_T_pvar_stop( ${1:MPI_T_pvar_session pe_session} , ${2:MPI_T_pvar_handle handle});"]
+},
+
+"MPI_T_pvar_write": {
+	"scope": "c,cpp",
+	"prefix": ["MPI_T_pvar_write"],
+	"description" : "MPI T_pvar_write Snippet",
+	"body" : [ "MPI_T_pvar_write( ${1:MPI_T_pvar_session pe_session} , ${2:MPI_T_pvar_handle handle} , ${3:const void* buf});"]
+},
+
+"MPI_T_source_get_info": {
+	"scope": "c,cpp",
+	"prefix": ["MPI_T_source_get_info"],
+	"description" : "MPI T_source_get_info Snippet",
+	"body" : [ "MPI_T_source_get_info( ${1:int source_index} , ${2:char* name} , ${3:int* name_len} , ${4:char* desc} , ${5:int* desc_len} , ${6:MPI_T_source_order* ordering} , ${7:MPI_Count* ticks_per_second} , ${8:MPI_Count* max_ticks} , ${9:MPI_Info* info});"]
+},
+
+"MPI_T_source_get_num": {
+	"scope": "c,cpp",
+	"prefix": ["MPI_T_source_get_num"],
+	"description" : "MPI T_source_get_num Snippet",
+	"body" : [ "MPI_T_source_get_num( ${1:int* num_sources});"]
+},
+
+"MPI_T_source_get_timestamp": {
+	"scope": "c,cpp",
+	"prefix": ["MPI_T_source_get_timestamp"],
+	"description" : "MPI T_source_get_timestamp Snippet",
+	"body" : [ "MPI_T_source_get_timestamp( ${1:int source_index} , ${2:MPI_Count* timestamp});"]
+},
+
+"MPI_Test": {
+	"scope": "c,cpp",
+	"prefix": ["MPI_Test"],
+	"description" : "MPI Test Snippet",
+	"body" : [ "MPI_Test( ${1:MPI_Request* request} , ${2:int* flag} , ${3:MPI_Status* status});"]
+},
+
+"MPI_Test_cancelled": {
+	"scope": "c,cpp",
+	"prefix": ["MPI_Test_cancelled"],
+	"description" : "MPI Test_cancelled Snippet",
+	"body" : [ "MPI_Test_cancelled( ${1:const MPI_Status* status} , ${2:int* flag});"]
+},
+
+"MPI_Testall": {
+	"scope": "c,cpp",
+	"prefix": ["MPI_Testall"],
+	"description" : "MPI Testall Snippet",
+	"body" : [ "MPI_Testall( ${1:int count} , ${2:MPI_Request array_of_requests[]} , ${3:int* flag} , ${4:MPI_Status array_of_statuses[]});"]
+},
+
+"MPI_Testany": {
+	"scope": "c,cpp",
+	"prefix": ["MPI_Testany"],
+	"description" : "MPI Testany Snippet",
+	"body" : [ "MPI_Testany( ${1:int count} , ${2:MPI_Request array_of_requests[]} , ${3:int* index} , ${4:int* flag} , ${5:MPI_Status* status});"]
+},
+
+"MPI_Testsome": {
+	"scope": "c,cpp",
+	"prefix": ["MPI_Testsome"],
+	"description" : "MPI Testsome Snippet",
+	"body" : [ "MPI_Testsome( ${1:int incount} , ${2:MPI_Request array_of_requests[]} , ${3:int* outcount} , ${4:int array_of_indices[]} , ${5:MPI_Status array_of_statuses[]});"]
+},
+
+"MPI_Topo_test": {
+	"scope": "c,cpp",
+	"prefix": ["MPI_Topo_test"],
+	"description" : "MPI Topo_test Snippet",
+	"body" : [ "MPI_Topo_test( ${1:MPI_Comm comm} , ${2:int* status});"]
+},
+
+"MPI_Type_commit": {
+	"scope": "c,cpp",
+	"prefix": ["MPI_Type_commit"],
+	"description" : "MPI Type_commit Snippet",
+	"body" : [ "MPI_Type_commit( ${1:MPI_Datatype* datatype});"]
+},
+
+"MPI_Type_contiguous": {
+	"scope": "c,cpp",
+	"prefix": ["MPI_Type_contiguous"],
+	"description" : "MPI Type_contiguous Snippet",
+	"body" : [ "MPI_Type_contiguous( ${1:MPI_Count count} , ${2:MPI_Datatype oldtype} , ${3:MPI_Datatype* newtype});"]
+},
+
+"MPI_Type_create_darray": {
+	"scope": "c,cpp",
+	"prefix": ["MPI_Type_create_darray"],
+	"description" : "MPI Type_create_darray Snippet",
+	"body" : [ "MPI_Type_create_darray( ${1:int size} , ${2:int rank} , ${3:int ndims} , ${4:const MPI_Count array_of_gsizes[]} , ${5:const int array_of_distribs[]} , ${6:const int array_of_dargs[]} , ${7:const int array_of_psizes[]} , ${8:int order} , ${9:MPI_Datatype oldtype} , ${10:MPI_Datatype* newtype});"]
+},
+
+"MPI_Type_create_f90_complex": {
+	"scope": "c,cpp",
+	"prefix": ["MPI_Type_create_f90_complex"],
+	"description" : "MPI Type_create_f90_complex Snippet",
+	"body" : [ "MPI_Type_create_f90_complex( ${1:int p} , ${2:int r} , ${3:MPI_Datatype* newtype});"]
+},
+
+"MPI_Type_create_f90_integer": {
+	"scope": "c,cpp",
+	"prefix": ["MPI_Type_create_f90_integer"],
+	"description" : "MPI Type_create_f90_integer Snippet",
+	"body" : [ "MPI_Type_create_f90_integer( ${1:int r} , ${2:MPI_Datatype* newtype});"]
+},
+
+"MPI_Type_create_f90_real": {
+	"scope": "c,cpp",
+	"prefix": ["MPI_Type_create_f90_real"],
+	"description" : "MPI Type_create_f90_real Snippet",
+	"body" : [ "MPI_Type_create_f90_real( ${1:int p} , ${2:int r} , ${3:MPI_Datatype* newtype});"]
+},
+
+"MPI_Type_create_hindexed": {
+	"scope": "c,cpp",
+	"prefix": ["MPI_Type_create_hindexed"],
+	"description" : "MPI Type_create_hindexed Snippet",
+	"body" : [ "MPI_Type_create_hindexed( ${1:MPI_Count count} , ${2:const MPI_Count array_of_blocklengths[]} , ${3:const MPI_Count array_of_displacements[]} , ${4:MPI_Datatype oldtype} , ${5:MPI_Datatype* newtype});"]
+},
+
+"MPI_Type_create_hindexed_block": {
+	"scope": "c,cpp",
+	"prefix": ["MPI_Type_create_hindexed_block"],
+	"description" : "MPI Type_create_hindexed_block Snippet",
+	"body" : [ "MPI_Type_create_hindexed_block( ${1:MPI_Count count} , ${2:MPI_Count blocklength} , ${3:const MPI_Count array_of_displacements[]} , ${4:MPI_Datatype oldtype} , ${5:MPI_Datatype* newtype});"]
+},
+
+"MPI_Type_create_hvector": {
+	"scope": "c,cpp",
+	"prefix": ["MPI_Type_create_hvector"],
+	"description" : "MPI Type_create_hvector Snippet",
+	"body" : [ "MPI_Type_create_hvector( ${1:MPI_Count count} , ${2:MPI_Count blocklength} , ${3:MPI_Count stride} , ${4:MPI_Datatype oldtype} , ${5:MPI_Datatype* newtype});"]
+},
+
+"MPI_Type_create_indexed_block": {
+	"scope": "c,cpp",
+	"prefix": ["MPI_Type_create_indexed_block"],
+	"description" : "MPI Type_create_indexed_block Snippet",
+	"body" : [ "MPI_Type_create_indexed_block( ${1:MPI_Count count} , ${2:MPI_Count blocklength} , ${3:const MPI_Count array_of_displacements[]} , ${4:MPI_Datatype oldtype} , ${5:MPI_Datatype* newtype});"]
+},
+
+"MPI_Type_create_keyval": {
+	"scope": "c,cpp",
+	"prefix": ["MPI_Type_create_keyval"],
+	"description" : "MPI Type_create_keyval Snippet",
+	"body" : [ "MPI_Type_create_keyval( ${1:MPI_Type_copy_attr_function* type_copy_attr_fn} , ${2:MPI_Type_delete_attr_function* type_delete_attr_fn} , ${3:int* type_keyval} , ${4:void* extra_state});"]
+},
+
+"MPI_Type_create_resized": {
+	"scope": "c,cpp",
+	"prefix": ["MPI_Type_create_resized"],
+	"description" : "MPI Type_create_resized Snippet",
+	"body" : [ "MPI_Type_create_resized( ${1:MPI_Datatype oldtype} , ${2:MPI_Count lb} , ${3:MPI_Count extent} , ${4:MPI_Datatype* newtype});"]
+},
+
+"MPI_Type_create_struct": {
+	"scope": "c,cpp",
+	"prefix": ["MPI_Type_create_struct"],
+	"description" : "MPI Type_create_struct Snippet",
+	"body" : [ "MPI_Type_create_struct( ${1:MPI_Count count} , ${2:const MPI_Count array_of_blocklengths[]} , ${3:const MPI_Count array_of_displacements[]} , ${4:const MPI_Datatype array_of_types[]} , ${5:MPI_Datatype* newtype});"]
+},
+
+"MPI_Type_create_subarray": {
+	"scope": "c,cpp",
+	"prefix": ["MPI_Type_create_subarray"],
+	"description" : "MPI Type_create_subarray Snippet",
+	"body" : [ "MPI_Type_create_subarray( ${1:int ndims} , ${2:const MPI_Count array_of_sizes[]} , ${3:const MPI_Count array_of_subsizes[]} , ${4:const MPI_Count array_of_starts[]} , ${5:int order} , ${6:MPI_Datatype oldtype} , ${7:MPI_Datatype* newtype});"]
+},
+
+"MPI_Type_delete_attr": {
+	"scope": "c,cpp",
+	"prefix": ["MPI_Type_delete_attr"],
+	"description" : "MPI Type_delete_attr Snippet",
+	"body" : [ "MPI_Type_delete_attr( ${1:MPI_Datatype datatype} , ${2:int type_keyval});"]
+},
+
+"MPI_Type_dup": {
+	"scope": "c,cpp",
+	"prefix": ["MPI_Type_dup"],
+	"description" : "MPI Type_dup Snippet",
+	"body" : [ "MPI_Type_dup( ${1:MPI_Datatype oldtype} , ${2:MPI_Datatype* newtype});"]
+},
+
+"MPI_Type_free": {
+	"scope": "c,cpp",
+	"prefix": ["MPI_Type_free"],
+	"description" : "MPI Type_free Snippet",
+	"body" : [ "MPI_Type_free( ${1:MPI_Datatype* datatype});"]
+},
+
+"MPI_Type_free_keyval": {
+	"scope": "c,cpp",
+	"prefix": ["MPI_Type_free_keyval"],
+	"description" : "MPI Type_free_keyval Snippet",
+	"body" : [ "MPI_Type_free_keyval( ${1:int* type_keyval});"]
+},
+
+"MPI_Type_get_attr": {
+	"scope": "c,cpp",
+	"prefix": ["MPI_Type_get_attr"],
+	"description" : "MPI Type_get_attr Snippet",
+	"body" : [ "MPI_Type_get_attr( ${1:MPI_Datatype datatype} , ${2:int type_keyval} , ${3:void* attribute_val} , ${4:int* flag});"]
+},
+
+"MPI_Type_get_contents": {
+	"scope": "c,cpp",
+	"prefix": ["MPI_Type_get_contents"],
+	"description" : "MPI Type_get_contents Snippet",
+	"body" : [ "MPI_Type_get_contents( ${1:MPI_Datatype datatype} , ${2:MPI_Count max_integers} , ${3:MPI_Count max_addresses} , ${4:MPI_Count max_large_counts} , ${5:MPI_Count max_datatypes} , ${6:int array_of_integers[]} , ${7:MPI_Aint array_of_addresses[]} , ${8:MPI_Count array_of_large_counts[]} , ${9:MPI_Datatype array_of_datatypes[]});"]
+},
+
+"MPI_Type_get_envelope": {
+	"scope": "c,cpp",
+	"prefix": ["MPI_Type_get_envelope"],
+	"description" : "MPI Type_get_envelope Snippet",
+	"body" : [ "MPI_Type_get_envelope( ${1:MPI_Datatype datatype} , ${2:MPI_Count* num_integers} , ${3:MPI_Count* num_addresses} , ${4:MPI_Count* num_large_counts} , ${5:MPI_Count* num_datatypes} , ${6:int* combiner});"]
+},
+
+"MPI_Type_get_extent": {
+	"scope": "c,cpp",
+	"prefix": ["MPI_Type_get_extent"],
+	"description" : "MPI Type_get_extent Snippet",
+	"body" : [ "MPI_Type_get_extent( ${1:MPI_Datatype datatype} , ${2:MPI_Count* lb} , ${3:MPI_Count* extent});"]
+},
+
+"MPI_Type_get_extent_x": {
+	"scope": "c,cpp",
+	"prefix": ["MPI_Type_get_extent_x"],
+	"description" : "MPI Type_get_extent_x Snippet",
+	"body" : [ "MPI_Type_get_extent_x( ${1:MPI_Datatype datatype} , ${2:MPI_Count* lb} , ${3:MPI_Count* extent});"]
+},
+
+"MPI_Type_get_name": {
+	"scope": "c,cpp",
+	"prefix": ["MPI_Type_get_name"],
+	"description" : "MPI Type_get_name Snippet",
+	"body" : [ "MPI_Type_get_name( ${1:MPI_Datatype datatype} , ${2:char* type_name} , ${3:int* resultlen});"]
+},
+
+"MPI_Type_get_true_extent": {
+	"scope": "c,cpp",
+	"prefix": ["MPI_Type_get_true_extent"],
+	"description" : "MPI Type_get_true_extent Snippet",
+	"body" : [ "MPI_Type_get_true_extent( ${1:MPI_Datatype datatype} , ${2:MPI_Count* true_lb} , ${3:MPI_Count* true_extent});"]
+},
+
+"MPI_Type_get_true_extent_x": {
+	"scope": "c,cpp",
+	"prefix": ["MPI_Type_get_true_extent_x"],
+	"description" : "MPI Type_get_true_extent_x Snippet",
+	"body" : [ "MPI_Type_get_true_extent_x( ${1:MPI_Datatype datatype} , ${2:MPI_Count* true_lb} , ${3:MPI_Count* true_extent});"]
+},
+
+"MPI_Type_indexed": {
+	"scope": "c,cpp",
+	"prefix": ["MPI_Type_indexed"],
+	"description" : "MPI Type_indexed Snippet",
+	"body" : [ "MPI_Type_indexed( ${1:MPI_Count count} , ${2:const MPI_Count array_of_blocklengths[]} , ${3:const MPI_Count array_of_displacements[]} , ${4:MPI_Datatype oldtype} , ${5:MPI_Datatype* newtype});"]
+},
+
+"MPI_Type_match_size": {
+	"scope": "c,cpp",
+	"prefix": ["MPI_Type_match_size"],
+	"description" : "MPI Type_match_size Snippet",
+	"body" : [ "MPI_Type_match_size( ${1:int typeclass} , ${2:int size} , ${3:MPI_Datatype* datatype});"]
+},
+
+"MPI_Type_set_attr": {
+	"scope": "c,cpp",
+	"prefix": ["MPI_Type_set_attr"],
+	"description" : "MPI Type_set_attr Snippet",
+	"body" : [ "MPI_Type_set_attr( ${1:MPI_Datatype datatype} , ${2:int type_keyval} , ${3:void* attribute_val});"]
+},
+
+"MPI_Type_set_name": {
+	"scope": "c,cpp",
+	"prefix": ["MPI_Type_set_name"],
+	"description" : "MPI Type_set_name Snippet",
+	"body" : [ "MPI_Type_set_name( ${1:MPI_Datatype datatype} , ${2:const char* type_name});"]
+},
+
+"MPI_Type_size": {
+	"scope": "c,cpp",
+	"prefix": ["MPI_Type_size"],
+	"description" : "MPI Type_size Snippet",
+	"body" : [ "MPI_Type_size( ${1:MPI_Datatype datatype} , ${2:MPI_Count* size});"]
+},
+
+"MPI_Type_size_x": {
+	"scope": "c,cpp",
+	"prefix": ["MPI_Type_size_x"],
+	"description" : "MPI Type_size_x Snippet",
+	"body" : [ "MPI_Type_size_x( ${1:MPI_Datatype datatype} , ${2:MPI_Count* size});"]
+},
+
+"MPI_Type_vector": {
+	"scope": "c,cpp",
+	"prefix": ["MPI_Type_vector"],
+	"description" : "MPI Type_vector Snippet",
+	"body" : [ "MPI_Type_vector( ${1:MPI_Count count} , ${2:MPI_Count blocklength} , ${3:MPI_Count stride} , ${4:MPI_Datatype oldtype} , ${5:MPI_Datatype* newtype});"]
+},
+
+"MPI_Unpack": {
+	"scope": "c,cpp",
+	"prefix": ["MPI_Unpack"],
+	"description" : "MPI Unpack Snippet",
+	"body" : [ "MPI_Unpack( ${1:const void* inbuf} , ${2:MPI_Count insize} , ${3:MPI_Count* position} , ${4:void* outbuf} , ${5:MPI_Count outcount} , ${6:MPI_Datatype datatype} , ${7:MPI_Comm comm});"]
+},
+
+"MPI_Unpack_external": {
+	"scope": "c,cpp",
+	"prefix": ["MPI_Unpack_external"],
+	"description" : "MPI Unpack_external Snippet",
+	"body" : [ "MPI_Unpack_external( ${1:const char datarep[]} , ${2:const void* inbuf} , ${3:MPI_Count insize} , ${4:MPI_Count* position} , ${5:void* outbuf} , ${6:MPI_Count outcount} , ${7:MPI_Datatype datatype});"]
+},
+
+"MPI_Unpublish_name": {
+	"scope": "c,cpp",
+	"prefix": ["MPI_Unpublish_name"],
+	"description" : "MPI Unpublish_name Snippet",
+	"body" : [ "MPI_Unpublish_name( ${1:const char* service_name} , ${2:MPI_Info info} , ${3:const char* port_name});"]
+},
+
+"MPI_Wait": {
+	"scope": "c,cpp",
+	"prefix": ["MPI_Wait"],
+	"description" : "MPI Wait Snippet",
+	"body" : [ "MPI_Wait( ${1:MPI_Request* request} , ${2:MPI_Status* status});"]
+},
+
+"MPI_Waitall": {
+	"scope": "c,cpp",
+	"prefix": ["MPI_Waitall"],
+	"description" : "MPI Waitall Snippet",
+	"body" : [ "MPI_Waitall( ${1:int count} , ${2:MPI_Request array_of_requests[]} , ${3:MPI_Status array_of_statuses[]});"]
+},
+
+"MPI_Waitany": {
+	"scope": "c,cpp",
+	"prefix": ["MPI_Waitany"],
+	"description" : "MPI Waitany Snippet",
+	"body" : [ "MPI_Waitany( ${1:int count} , ${2:MPI_Request array_of_requests[]} , ${3:int* index} , ${4:MPI_Status* status});"]
+},
+
+"MPI_Waitsome": {
+	"scope": "c,cpp",
+	"prefix": ["MPI_Waitsome"],
+	"description" : "MPI Waitsome Snippet",
+	"body" : [ "MPI_Waitsome( ${1:int incount} , ${2:MPI_Request array_of_requests[]} , ${3:int* outcount} , ${4:int array_of_indices[]} , ${5:MPI_Status array_of_statuses[]});"]
+},
+
+"MPI_Win_allocate": {
+	"scope": "c,cpp",
+	"prefix": ["MPI_Win_allocate"],
+	"description" : "MPI Win_allocate Snippet",
+	"body" : [ "MPI_Win_allocate( ${1:MPI_Aint size} , ${2:MPI_Aint disp_unit} , ${3:MPI_Info info} , ${4:MPI_Comm comm} , ${5:void* baseptr} , ${6:MPI_Win* win});"]
+},
+
+"MPI_Win_allocate_shared": {
+	"scope": "c,cpp",
+	"prefix": ["MPI_Win_allocate_shared"],
+	"description" : "MPI Win_allocate_shared Snippet",
+	"body" : [ "MPI_Win_allocate_shared( ${1:MPI_Aint size} , ${2:MPI_Aint disp_unit} , ${3:MPI_Info info} , ${4:MPI_Comm comm} , ${5:void* baseptr} , ${6:MPI_Win* win});"]
+},
+
+"MPI_Win_attach": {
+	"scope": "c,cpp",
+	"prefix": ["MPI_Win_attach"],
+	"description" : "MPI Win_attach Snippet",
+	"body" : [ "MPI_Win_attach( ${1:MPI_Win win} , ${2:void* base} , ${3:MPI_Aint size});"]
+},
+
+"MPI_Win_call_errhandler": {
+	"scope": "c,cpp",
+	"prefix": ["MPI_Win_call_errhandler"],
+	"description" : "MPI Win_call_errhandler Snippet",
+	"body" : [ "MPI_Win_call_errhandler( ${1:MPI_Win win} , ${2:int errorcode});"]
+},
+
+"MPI_Win_complete": {
+	"scope": "c,cpp",
+	"prefix": ["MPI_Win_complete"],
+	"description" : "MPI Win_complete Snippet",
+	"body" : [ "MPI_Win_complete( ${1:MPI_Win win});"]
+},
+
+"MPI_Win_create": {
+	"scope": "c,cpp",
+	"prefix": ["MPI_Win_create"],
+	"description" : "MPI Win_create Snippet",
+	"body" : [ "MPI_Win_create( ${1:void* base} , ${2:MPI_Aint size} , ${3:MPI_Aint disp_unit} , ${4:MPI_Info info} , ${5:MPI_Comm comm} , ${6:MPI_Win* win});"]
+},
+
+"MPI_Win_create_dynamic": {
+	"scope": "c,cpp",
+	"prefix": ["MPI_Win_create_dynamic"],
+	"description" : "MPI Win_create_dynamic Snippet",
+	"body" : [ "MPI_Win_create_dynamic( ${1:MPI_Info info} , ${2:MPI_Comm comm} , ${3:MPI_Win* win});"]
+},
+
+"MPI_Win_create_errhandler": {
+	"scope": "c,cpp",
+	"prefix": ["MPI_Win_create_errhandler"],
+	"description" : "MPI Win_create_errhandler Snippet",
+	"body" : [ "MPI_Win_create_errhandler( ${1:MPI_Win_errhandler_function* win_errhandler_fn} , ${2:MPI_Errhandler* errhandler});"]
+},
+
+"MPI_Win_create_keyval": {
+	"scope": "c,cpp",
+	"prefix": ["MPI_Win_create_keyval"],
+	"description" : "MPI Win_create_keyval Snippet",
+	"body" : [ "MPI_Win_create_keyval( ${1:MPI_Win_copy_attr_function* win_copy_attr_fn} , ${2:MPI_Win_delete_attr_function* win_delete_attr_fn} , ${3:int* win_keyval} , ${4:void* extra_state});"]
+},
+
+"MPI_Win_delete_attr": {
+	"scope": "c,cpp",
+	"prefix": ["MPI_Win_delete_attr"],
+	"description" : "MPI Win_delete_attr Snippet",
+	"body" : [ "MPI_Win_delete_attr( ${1:MPI_Win win} , ${2:int win_keyval});"]
+},
+
+"MPI_Win_detach": {
+	"scope": "c,cpp",
+	"prefix": ["MPI_Win_detach"],
+	"description" : "MPI Win_detach Snippet",
+	"body" : [ "MPI_Win_detach( ${1:MPI_Win win} , ${2:const void* base});"]
+},
+
+"MPI_Win_fence": {
+	"scope": "c,cpp",
+	"prefix": ["MPI_Win_fence"],
+	"description" : "MPI Win_fence Snippet",
+	"body" : [ "MPI_Win_fence( ${1:int assert} , ${2:MPI_Win win});"]
+},
+
+"MPI_Win_flush": {
+	"scope": "c,cpp",
+	"prefix": ["MPI_Win_flush"],
+	"description" : "MPI Win_flush Snippet",
+	"body" : [ "MPI_Win_flush( ${1:int rank} , ${2:MPI_Win win});"]
+},
+
+"MPI_Win_flush_all": {
+	"scope": "c,cpp",
+	"prefix": ["MPI_Win_flush_all"],
+	"description" : "MPI Win_flush_all Snippet",
+	"body" : [ "MPI_Win_flush_all( ${1:MPI_Win win});"]
+},
+
+"MPI_Win_flush_local": {
+	"scope": "c,cpp",
+	"prefix": ["MPI_Win_flush_local"],
+	"description" : "MPI Win_flush_local Snippet",
+	"body" : [ "MPI_Win_flush_local( ${1:int rank} , ${2:MPI_Win win});"]
+},
+
+"MPI_Win_flush_local_all": {
+	"scope": "c,cpp",
+	"prefix": ["MPI_Win_flush_local_all"],
+	"description" : "MPI Win_flush_local_all Snippet",
+	"body" : [ "MPI_Win_flush_local_all( ${1:MPI_Win win});"]
+},
+
+"MPI_Win_free": {
+	"scope": "c,cpp",
+	"prefix": ["MPI_Win_free"],
+	"description" : "MPI Win_free Snippet",
+	"body" : [ "MPI_Win_free( ${1:MPI_Win* win});"]
+},
+
+"MPI_Win_free_keyval": {
+	"scope": "c,cpp",
+	"prefix": ["MPI_Win_free_keyval"],
+	"description" : "MPI Win_free_keyval Snippet",
+	"body" : [ "MPI_Win_free_keyval( ${1:int* win_keyval});"]
+},
+
+"MPI_Win_get_attr": {
+	"scope": "c,cpp",
+	"prefix": ["MPI_Win_get_attr"],
+	"description" : "MPI Win_get_attr Snippet",
+	"body" : [ "MPI_Win_get_attr( ${1:MPI_Win win} , ${2:int win_keyval} , ${3:void* attribute_val} , ${4:int* flag});"]
+},
+
+"MPI_Win_get_errhandler": {
+	"scope": "c,cpp",
+	"prefix": ["MPI_Win_get_errhandler"],
+	"description" : "MPI Win_get_errhandler Snippet",
+	"body" : [ "MPI_Win_get_errhandler( ${1:MPI_Win win} , ${2:MPI_Errhandler* errhandler});"]
+},
+
+"MPI_Win_get_group": {
+	"scope": "c,cpp",
+	"prefix": ["MPI_Win_get_group"],
+	"description" : "MPI Win_get_group Snippet",
+	"body" : [ "MPI_Win_get_group( ${1:MPI_Win win} , ${2:MPI_Group* group});"]
+},
+
+"MPI_Win_get_info": {
+	"scope": "c,cpp",
+	"prefix": ["MPI_Win_get_info"],
+	"description" : "MPI Win_get_info Snippet",
+	"body" : [ "MPI_Win_get_info( ${1:MPI_Win win} , ${2:MPI_Info* info_used});"]
+},
+
+"MPI_Win_get_name": {
+	"scope": "c,cpp",
+	"prefix": ["MPI_Win_get_name"],
+	"description" : "MPI Win_get_name Snippet",
+	"body" : [ "MPI_Win_get_name( ${1:MPI_Win win} , ${2:char* win_name} , ${3:int* resultlen});"]
+},
+
+"MPI_Win_lock": {
+	"scope": "c,cpp",
+	"prefix": ["MPI_Win_lock"],
+	"description" : "MPI Win_lock Snippet",
+	"body" : [ "MPI_Win_lock( ${1:int lock_type} , ${2:int rank} , ${3:int assert} , ${4:MPI_Win win});"]
+},
+
+"MPI_Win_lock_all": {
+	"scope": "c,cpp",
+	"prefix": ["MPI_Win_lock_all"],
+	"description" : "MPI Win_lock_all Snippet",
+	"body" : [ "MPI_Win_lock_all( ${1:int assert} , ${2:MPI_Win win});"]
+},
+
+"MPI_Win_post": {
+	"scope": "c,cpp",
+	"prefix": ["MPI_Win_post"],
+	"description" : "MPI Win_post Snippet",
+	"body" : [ "MPI_Win_post( ${1:MPI_Group group} , ${2:int assert} , ${3:MPI_Win win});"]
+},
+
+"MPI_Win_set_attr": {
+	"scope": "c,cpp",
+	"prefix": ["MPI_Win_set_attr"],
+	"description" : "MPI Win_set_attr Snippet",
+	"body" : [ "MPI_Win_set_attr( ${1:MPI_Win win} , ${2:int win_keyval} , ${3:void* attribute_val});"]
+},
+
+"MPI_Win_set_errhandler": {
+	"scope": "c,cpp",
+	"prefix": ["MPI_Win_set_errhandler"],
+	"description" : "MPI Win_set_errhandler Snippet",
+	"body" : [ "MPI_Win_set_errhandler( ${1:MPI_Win win} , ${2:MPI_Errhandler errhandler});"]
+},
+
+"MPI_Win_set_info": {
+	"scope": "c,cpp",
+	"prefix": ["MPI_Win_set_info"],
+	"description" : "MPI Win_set_info Snippet",
+	"body" : [ "MPI_Win_set_info( ${1:MPI_Win win} , ${2:MPI_Info info});"]
+},
+
+"MPI_Win_set_name": {
+	"scope": "c,cpp",
+	"prefix": ["MPI_Win_set_name"],
+	"description" : "MPI Win_set_name Snippet",
+	"body" : [ "MPI_Win_set_name( ${1:MPI_Win win} , ${2:const char* win_name});"]
+},
+
+"MPI_Win_shared_query": {
+	"scope": "c,cpp",
+	"prefix": ["MPI_Win_shared_query"],
+	"description" : "MPI Win_shared_query Snippet",
+	"body" : [ "MPI_Win_shared_query( ${1:MPI_Win win} , ${2:int rank} , ${3:MPI_Aint* size} , ${4:MPI_Aint* disp_unit} , ${5:void* baseptr});"]
+},
+
+"MPI_Win_start": {
+	"scope": "c,cpp",
+	"prefix": ["MPI_Win_start"],
+	"description" : "MPI Win_start Snippet",
+	"body" : [ "MPI_Win_start( ${1:MPI_Group group} , ${2:int assert} , ${3:MPI_Win win});"]
+},
+
+"MPI_Win_sync": {
+	"scope": "c,cpp",
+	"prefix": ["MPI_Win_sync"],
+	"description" : "MPI Win_sync Snippet",
+	"body" : [ "MPI_Win_sync( ${1:MPI_Win win});"]
+},
+
+"MPI_Win_test": {
+	"scope": "c,cpp",
+	"prefix": ["MPI_Win_test"],
+	"description" : "MPI Win_test Snippet",
+	"body" : [ "MPI_Win_test( ${1:MPI_Win win} , ${2:int* flag});"]
+},
+
+"MPI_Win_unlock": {
+	"scope": "c,cpp",
+	"prefix": ["MPI_Win_unlock"],
+	"description" : "MPI Win_unlock Snippet",
+	"body" : [ "MPI_Win_unlock( ${1:int rank} , ${2:MPI_Win win});"]
+},
+
+"MPI_Win_unlock_all": {
+	"scope": "c,cpp",
+	"prefix": ["MPI_Win_unlock_all"],
+	"description" : "MPI Win_unlock_all Snippet",
+	"body" : [ "MPI_Win_unlock_all( ${1:MPI_Win win});"]
+},
+
+"MPI_Win_wait": {
+	"scope": "c,cpp",
+	"prefix": ["MPI_Win_wait"],
+	"description" : "MPI Win_wait Snippet",
+	"body" : [ "MPI_Win_wait( ${1:MPI_Win win});"]
+},
+
+"MPI_Wtick": {
+	"scope": "c,cpp",
+	"prefix": ["MPI_Wtick"],
+	"description" : "MPI Wtick Snippet",
+	"body" : [ "MPI_Wtick();"]
+},
+
+"MPI_Wtime": {
+	"scope": "c,cpp",
+	"prefix": ["MPI_Wtime"],
+	"description" : "MPI Wtime Snippet",
+	"body" : [ "MPI_Wtime();"]
+},
+
+"Main() MPI" : {
+    "scope" : "c,cpp",
+	"prefix" : ["mainmpi", "mpimain", "mpi-main" ],
+	"description": "Generate a basic MPI program",
+	"body" : [
+"#include <mpi.h>",
+"",
+"int main( int argc, char *argv[])",
+"{",
+"\tint rank, size;",
+"\tMPI_Init(&argc, &argv);",
+"\tMPI_Comm_rank(MPI_COMM_WORLD, &rank);",
+"\tMPI_Comm_size(MPI_COMM_WORLD, &size);",
+"\t",
+"\t${1:printf(\"Rank: %d/%d\\n\", rank, size);}",
+"\t",
+"\tMPI_Finalize();",
+"\t",
+"\treturn 0;",
+"}"
+]},
+
+"Comm Self": {
+	"scope" : "c,cpp",
+	"prefix": ["cself", "CS"],
+	"description": "Expand to MPI_COMM_SELF",
+	"body" : "MPI_COMM_SELF"
+},
+
+"Comm World": {
+    "scope" : "c,cpp",
+	"prefix": ["cworld", "CW"],
+	"description": "Expand to MPI_COMM_WORLD",
+	"body" : "MPI_COMM_WORLD"
+}
+}
