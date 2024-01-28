@@ -66,7 +66,7 @@ def test(args):
     logger.info('start test')
 
     # TOKENIZER
-    with open(r'mpi/hf/mpi.code-snippets', 'r') as f:
+    with open(r'mpi.code-snippets', 'r') as f:
         file = json.load(f)
     tokom_extended_tokens = [prefix.lower() for prefix in file.keys()] + ['parallel']
 
@@ -107,10 +107,10 @@ def test(args):
         test_loader = DataLoader(dataset=testd, batch_size=1, collate_fn=collator)
 
     # MODEL
-    model_name = 'mpi_poly_tokom' if args.is_replaced else 'mpi_poly_bpe_2048_3_epochs_close_1_line'
-    model = AutoModelForCausalLM.from_pretrained("NinedayWang/PolyCoder-2.7B")
-    # model = GPTNeoXForCausalLM.from_pretrained(os.path.join(args.save_dir, model_name))
-    #
+    model_name = 'mpirigen'
+    # model = AutoModelForCausalLM.from_pretrained("NinedayWang/PolyCoder-2.7B")
+    model = GPTNeoXForCausalLM.from_pretrained(os.path.join(args.save_dir, model_name))
+
     model.to(args.device)
     model.eval()
     print('Model has been loaded')
@@ -139,50 +139,12 @@ def test(args):
             outputs = model.generate(input_ids=input_ids, attention_mask=mask,
                                      max_new_tokens=max_new_tokens) # max_new_tokens=max(0, tokens_amount - context_size)
             logits = outputs[0]
-            # labels = tensor_batch['input_ids'][0]
-
             pred = tokenizer.decode(logits.tolist())
-            # label = tokenizer.decode(labels.tolist())
 
-            with open(f'results/polycoder_512_close.jsonl', 'a+') as f:
+            with open(f'mpirigen_512.jsonl', 'a+') as f:
                 sep = ' ' if args.is_replaced else ''
                 pred = sep.join(pred)
-                # label = sep.join(label)
                 f.write(json.dumps({'pred': pred[pred.rfind('parallel')+8:]}) + '\n')
-                # f.write(json.dumps({'label': label[label.rfind('parallel')+8:]}) + '\n')
-                # f.write(json.dumps({'code': label}) + '\n')
 
             steps += 1
             progress_bar.update(1)
-    # results = ''
-    # for batch_idx, batch in enumerate(test_loader):
-    #     tensor_batch = {k: v.to(args.device) for k, v in batch.items() if
-    #                     k in ['input_ids', 'labels', 'mask', 'attention_mask']}
-    #
-    #     labels = tensor_batch['input_ids'][0]
-    #     labels = labels[labels != 1]
-    #     # pdb.set_trace()
-    #     # tensor_batch['inputs_ids'] = tensor_batch['input_ids'][0][:torch.where(tensor_batch['input_ids'][0]==tokenizer.tokenizer.encoder['parallel'])[0][0]]
-    #     outputs = model(**tensor_batch)
-    #     logits = outputs.logits
-    #
-    #     preds = torch.argmax(logits, dim=-1)
-    #
-    #     if args.is_replaced:
-    #         preds = preds[preds != 1]
-    #     else:
-    #         preds = preds[preds != 50256]
-    #
-    #     try:
-    #         pred = tokenizer.decode(preds.tolist())
-    #         label = tokenizer.decode(labels.tolist())
-    #         results += f'{label}\n{pred}\n\n\n'
-    #         # pred_table.add_row([label[label.rfind('parallel'):] if 'parallel' in label else 'None',
-    #         #                     pred[pred.rfind('parallel'):] if 'parallel' in pred else 'None'])
-    #     except:
-    #         print('Decoder Error')
-
-        # progress_bar.update(1)
-
-    # with open(f'results/{model_name}_results.log', 'w') as f:
-    #     f.write(results)

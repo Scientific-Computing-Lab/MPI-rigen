@@ -11,7 +11,7 @@ from transformers import GPTNeoXForCausalLM, GPT2Tokenizer
 from tokenizer.tokenizer import TokompilerTokenizer, build_tokenizer
 
 # sys.path.append('/home/nadavsc/LIGHTBITS/code-lms/polycoder/tasks/tokenizer')
-with open(r'/home/nadavsc/LIGHTBITS/mpiricalplus/source/dataset/mpi.code-snippets', 'r') as f:
+with open(r'mpi.code-snippets', 'r') as f:
     file = json.load(f)
 tokom_extended_tokens = [prefix.lower() for prefix in file.keys()] + ['parallel']
 
@@ -45,9 +45,9 @@ def dataset_preprocess(args):
     count = 0
     encoder = 'tokom' if args.tokenizer_type=='Tokompiler' else 'bpe'
     dataset_dir = args.data_path
-    dpath = f'{dataset_dir}/mccplus_target_dataset_1_line.jsonl'
+    dpath = f'{dataset_dir}/HPCorpusMPI.jsonl'
     with open(dpath, 'r') as db:
-        with open(os.path.join(dataset_dir, f'mccplus_target_dataset_1_line_{args.max_length}_{encoder}.jsonl'), 'w') as target_db:
+        with open(os.path.join(dataset_dir, f'HPCorpusMPI_{args.max_length}_{encoder}.jsonl'), 'w') as target_db:
             for program in db:
                 json_obj = json.loads(program)
                 if args.is_replaced:

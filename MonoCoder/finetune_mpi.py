@@ -50,7 +50,7 @@ def finetune(args):
     logger.info(f'start finetune {args.model_name}')
 
     # TOKENIZER
-    with open(r'mpi/hf/mpi.code-snippets', 'r') as f:
+    with open(r'mpi.code-snippets', 'r') as f:
         file = json.load(f)
     tokom_extended_tokens = [prefix.lower() for prefix in file.keys()] + ['parallel']
 
@@ -77,8 +77,6 @@ def finetune(args):
         newd.append(outd)
 
     traind, testd = newd
-    import pdb
-    pdb.set_trace()
 
     if args.is_replaced:
 
@@ -101,7 +99,7 @@ def finetune(args):
     # model = AutoModelForCausalLM.from_pretrained("NinedayWang/PolyCoder-2.7B")  # , torch_dtype=torch.float16)
     # model.half()
     model = GPTNeoXForCausalLM.from_pretrained(os.path.join(args.models_dir, args.model_name))
-    output_model_name = 'mpi_poly_tokom' if args.is_replaced else 'mpi_poly_bpe'
+    output_model_name = 'mpi_mono'
     model.train()
     print('model has been loaded')
 
@@ -125,8 +123,6 @@ def finetune(args):
     for name, param in model.named_parameters():
         print(f"Parameter: {name}, Type: {param.dtype}")
     # TRAIN
-    # best_loss = 4
-    # best_model_state_dict = None
     for epoch in range(args.num_epochs):
         pbar = tqdm(train_loader, miniters=2, desc=f"Epoch {epoch}")
         loss_total = 0.0
@@ -150,9 +146,6 @@ def finetune(args):
                 logger.info(f'epoch {epoch} loss: {cur_loss}')
                 pbar.set_postfix({"avg_train_loss": loss_total / step})
 
-            # if cur_loss < best_loss:
-            #     best_model_state_dict = model.state_dict()
-            #     best_loss = cur_loss
             pbar.update(1)
 
         # VALIDATION
@@ -167,6 +160,3 @@ def finetune(args):
 
         print('save model')
         model.save_pretrained(os.path.join(args.save_dir, output_model_name), from_pt=True)
-    # logger.info(f'Best loss: {best_loss}')
-    # model.load_state_dict(best_model_state_dict)
-    model.save_pretrained(os.path.join(args.save_dir, output_model_name), from_pt=True)

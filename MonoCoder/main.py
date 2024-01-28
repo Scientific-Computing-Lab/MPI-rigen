@@ -1,41 +1,24 @@
 import os
 import sys
 
-sys.path.append('mpi/hf')
-sys.path.append('omp/hf')
 sys.path.append('tokenizer')
 from hf_data_mpi import dataset_preprocess
 import argparse
-import finetune_omp
 import finetune_mpi
-import test_omp
 import test_mpi
-from compcoder_eval import eval
 import logging
 from prettytable import PrettyTable
 
 
 def main(args):
-    if args.task == 'omp':
-        if args.do_finetune:
-            finetune_omp.finetune(args)
+    if args.do_finetune:
+        finetune_mpi.finetune(args)
 
-        if args.do_test:
-            test_omp.test(args)
+    if args.do_test:
+        test_mpi.test(args)
 
-    if args.task == 'mpi':
-        if args.do_finetune:
-            finetune_mpi.finetune(args)
-
-        if args.do_test:
-            test_mpi.test(args)
-
-        if args.do_preprocess:
-            dataset_preprocess(args)
-
-    if args.do_eval:
-        # TODO: loss and perplexity of BPE of test HPCorpus
-        eval(args)
+    if args.do_preprocess:
+        dataset_preprocess(args)
 
 
 if __name__ == '__main__':
@@ -49,7 +32,6 @@ if __name__ == '__main__':
     parser.add_argument('--do_eval', action='store_true', help='Whether to evaluation')
     parser.add_argument('--do_test', action='store_true', help='Whether to test')
     parser.add_argument('--do_preprocess', action='store_true', help='Filter examples to the max_length limit')
-    parser.add_argument('--task', type=str, default='mpi', help='omp/mpi')
     parser.add_argument('--device', default='cuda', choices=['cpu', 'cuda'], help='Specify the device (cpu or cuda)')
     parser.add_argument('--logger', default='info.log', help='Set logger file name')
     parser.add_argument('--max_length', type=int, default=2048, help='Max length of an example')
@@ -57,12 +39,11 @@ if __name__ == '__main__':
     # Data arguments
     parser.add_argument('-t', '--tokenizer_type', type=str,
                         choices=['GPT2BPETokenizer', 'Tokompiler', 'HFGPT2Tokenizer'], default='HFGPT2Tokenizer')
-    parser.add_argument('-v', '--vocab_file', type=str, default='../megatron/tokenizer/gpt_vocab/gpt2-vocab.json')
-    parser.add_argument('-m', '--merge_file', type=str, default='../megatron/tokenizer/gpt_vocab/gpt2-merges.txt')
-    parser.add_argument('-d', '--data_path', type=str, default=f'{os.path.expanduser("~")}/LIGHTBITS_SHARE/OMP_Dataset')
+    parser.add_argument('-v', '--vocab_file', type=str, default='tokenizer/gpt_vocab/gpt2-vocab.json')
+    parser.add_argument('-m', '--merge_file', type=str, default='tokenizer/gpt_vocab/gpt2-merges.txt')
+    parser.add_argument('-d', '--data_path', type=str, default=f'data/train')
     parser.add_argument('--data_device', default='cpu', choices=['cpu', 'gpu', 'mixed'])
-    parser.add_argument('--is_replaced', action='store_true')
-    parser.add_argument('--data_filename', type=str)
+    parser.add_argument('--is_replaced', default=False, action='store_true')
     parser.add_argument('--save', type=bool, default=True)
 
     # The following arguments are leftover from megatron settings -- you can keep the defaults
