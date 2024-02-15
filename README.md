@@ -61,7 +61,7 @@ conda activate <env_name>
 
 ## Citation
 For more information about the measures and their means of the implementations, please refer to the paper.
-If you found these codes useful for your research, please consider citing: https://arxiv.org/abs/2305.09438
+If you found these codes useful for your research, please consider citing: [https://arxiv.org/abs/2305.09438](https://arxiv.org/abs/2402.09126)
 
 
 ## Running
