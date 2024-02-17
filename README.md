@@ -74,6 +74,7 @@ The `MonoCoder` directory contains two self-contained scripts to fine-tune or ev
 
 ## Usage
 
+
 ### Hugging Face Model
 Monocoder is uploaded to Hugging Face and can be easily utilized in your own projects. Here's an example of how to use it in Python:
 
@@ -83,4 +84,14 @@ from transformers import GPTNeoXForCausalLM, GPT2Tokenizer
 tokenizer = GPT2Tokenizer(vocab_file=args.vocab_file, merges_file=args.merge_file, model_input_names=['input_ids'])
 model = GPTNeoXForCausalLM.from_pretrained('MonoCoder')
 ```
+### Google Drive
 
+In addition, the models can be provided on demand using the following link: [Model Drive Folder](https://drive.google.com/drive/folders/1748dR5DiJ7TEqUux9Q5WuhqpUlJw2wmp?usp=sharing).
+
+When downloading a model folder, you can easily load it using the following Python code:
+
+```python
+import os
+from transformers import GPTNeoXForCausalLM
+
+model = GPTNeoXForCausalLM.from_pretrained(os.path.join(args.models_dir, args.model_name))
