@@ -1,42 +1,32 @@
 # MPI Code Generation through Domain-Specific Language Models
 The imperative need to scale computation across numerous
 nodes accentuates the significance of efficient parallel com-
-puting, particularly in the realm of Message Passing Inter-
-face (MPI) integration. While MPI serves as a cornerstone for
+puting, particularly in the realm of Message Passing Interface (MPI) integration. While MPI serves as a cornerstone for
 large-scale parallelism, its seamless integration into codebases,
-especially concerning domain decomposition, has proven chal-
-lenging. Static tools aimed at addressing this hurdle have exhib-
-ited limited effectiveness and scalability. Surprisingly, contem-
-porary language models designed for code-related problem-
+especially concerning domain decomposition, has proven challenging. Static tools aimed at addressing this hurdle have exhib-
+ited limited effectiveness and scalability. Surprisingly, contemporary language models designed for code-related problem-
 solving have demonstrated utility in parallel programming
 tasks such as OpenMP shared memory pragma generation.
 However, the nuanced task of generating intricate, multi-functional
 MPI codes across diverse locations has remained unexplored.
 This study first investigates the performance of state-of-
 the-art language models in generating MPI codes using varied
-context sizes for next-token predictions, employing the HP-
-CorpusMPI dataset (based on MPICodeCorpus and HPCor-
-pus). Findings reveal that widely used models like GPT-3.5 and
+context sizes for next-token predictions, employing the HPCorpusMPI dataset (based on MPICodeCorpus and HPCorpus). Findings reveal that widely used models like GPT-3.5 and
 specialized multi-lingual code models like PolyCoder exhibit
 notable performance degradation when generating MPI codes
-compared to their outcomes for general-purpose codes. In con-
-trast, domain-specific models like MonoCoder, pre-trained
-for the C and C++ languages associated with MPI, outper-
-form larger models, showcasing high generality capabilities,
+compared to their outcomes for general-purpose codes. In contrast, domain-specific models like MonoCoder, pre-trained
+for the C and C++ languages associated with MPI, outperform larger models, showcasing high generality capabilities,
 especially when local misleading semantics are mitigated.
 Subsequently, we introduce a dedicated downstream task,
 fine-tuning MonoCoder on HPCorpusMPI, resulting in the
 creation of MPIrigen. We propose an innovative pre-process
-for completion only after observing the whole code, thus en-
-abling better completion with a wider context. Comparative
+for completion only after observing the whole code, thus enabling better completion with a wider context. Comparative
 analysis against PolyCoder fine-tuning and GPT zero-shot
 performance, using a novel HPC-oriented evaluation method,
 demonstrates that MPIrigen excels in generating accurate MPI
-functions up to 0.8 accuracy in location and function predic-
-tions, and with more than 0.9 accuracy for argument predic-
+functions up to 0.8 accuracy in location and function predictions, and with more than 0.9 accuracy for argument predic-
 tions. The success of this tailored solution underscores the
-importance of domain-specific fine-tuning in optimizing lan-
-guage models for parallel computing code generation, paving
+importance of domain-specific fine-tuning in optimizing language models for parallel computing code generation, paving
 the way for a new generation of automatic parallelization tools.
           
 ## Desired Objective  ##
